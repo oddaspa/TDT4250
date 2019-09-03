@@ -27,7 +27,41 @@ The submission should be a link to the repository to clone for assessment. The r
 
 <a name="ass_1_prog"></a>
 ### 1.2 Assignment 1 Progress
-![alt text](https://github.com/oddaspa/TDT4250/blob/master/img/first_iteration.png "Plant UML first iteration")
+EClasses
+- [x] Semester
+- [x] Course
+- [x] Programme
+- [x] Specialisation
+- [x] ProgrammeCourse
+
+EReferences
+- [x] Semester contained in a Programme
+- [x] Specialisation contained in a Programme
+- [x] Semester contained in a Specialisation
+- [x] ProgrammeCourse contained in a Semester
+- [x] Course contained in a ProgrammeCourse
+
+Constraints
+- [x] Total credits in a semester
+- [x] Name convention on code and name
+- [ ] Number of semesters in a programme
+- [ ] Number of courses in a semester
+- [ ] Courses allowed in a programme
+- [ ] Courses allowed in a specialization
+- [ ] Link between courses and programmeCourses
+- [ ] Link between specialisations and Programmes
+
+Tests
+- [ ] Total credits in a semester
+- [ ] Name convention on code and name
+- [ ] Number of semesters in a programme
+- [ ] Number of courses in a semester
+- [ ] Courses allowed in a programme
+- [ ] Courses allowed in a specialization
+- [ ] Link between courses and programmeCourses
+- [ ] Link between specialisations and Programmes
+
+![alt text](https://github.com/oddaspa/TDT4250/blob/master/img/first_iteration.png "Plant UML first iteration") <br />
 The Ecore model now supports the following EClasses:
 * Programme
   * EString name - e.g Master Data Science, Bachelor Information Technology, etc.
