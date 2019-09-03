@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Courses -->
+<Course> 
+	name="Advanced Software Design"
+	code = "TDT4250"
+	credit = 7.5
+	level = "master" 
+</Course>
+	
+<!-- ProgramCourses -->
+<ProgrammeCourse>
+	type = "mandatory" 
+</ProgrammeCourse>
+
+<!-- Semesters -->
+<Semester>
+	position = 7
+	totalCredits = 30 
+</Semester>
+	
+<!-- Specialisation -->
+<Specialisation>
+	name="Software Engineering" 
+</Specialisation>
+
+<!-- Programme -->
+<Course>
+	name="Computer Science"
+	code = "MTDT"
+	duration = 10 
+</Course>
