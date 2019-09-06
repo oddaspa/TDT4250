@@ -16,19 +16,18 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute programme.ecore#//Programme/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute programme.ecore#//Programme/code"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference programme.ecore#//Programme/semesters"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference programme.ecore#//Programme/programCourses"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute programme.ecore#//Programme/Duration"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference programme.ecore#//Programme/specialisations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference programme.ecore#//Programme/course"/>
     </genClasses>
     <genClasses ecoreClass="programme.ecore#//Semester">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute programme.ecore#//Semester/position"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference programme.ecore#//Semester/programCourses"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute programme.ecore#//Semester/totalCredits"/>
-      <genOperations ecoreOperation="programme.ecore#//Semester/creditsNeededShouldBe30"/>
     </genClasses>
     <genClasses ecoreClass="programme.ecore#//ProgrammeCourse">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference programme.ecore#//ProgrammeCourse/course"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute programme.ecore#//ProgrammeCourse/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference programme.ecore#//ProgrammeCourse/course"/>
     </genClasses>
     <genClasses ecoreClass="programme.ecore#//Specialisation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute programme.ecore#//Specialisation/name"/>

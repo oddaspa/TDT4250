@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<no.tdt4250.assignment.studyProgramme:Programme
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:no.tdt4250.assignment.studyProgramme="http://no/tdt4250/assignment/studyProgramme"
+    xsi:schemaLocation="http://no/tdt4250/assignment/studyProgramme programme.ecore"
+    name="Master Computer Science"
+    code="MTDT"
+    Duration="10">
+  <semesters
+      position="7">
+    <programCourses
+        type="Complementary"
+        course="//@course.1"/>
+    <programCourses
+        type="Mandatory"
+        course="//@course.2"/>
+    <programCourses
+        type="Mandatory"
+        course="//@course.3"/>
+  </semesters>
+  <semesters
+      position="1">
+    <programCourses
+        type="Mandatory"
+        course="//@course.8"/>
+    <programCourses
+        type="Mandatory"
+        course="//@course.5"/>
+    <programCourses
+        type="Mandatory"
+        course="//@course.6"/>
+  </semesters>
+  <semesters
+      position="2">
+    <programCourses
+        type="Mandatory"
+        course="//@course.7"/>
+    <programCourses
+        type="Mandatory"
+        course="//@course.9"/>
+    <programCourses
+        type="Mandatory"
+        course="//@course.10"/>
+    <programCourses
+        type="Mandatory"
+        course="//@course.11"/>
+  </semesters>
+  <semesters
+      position="3">
+    <programCourses
+        type="Mandatory"
+        course="//@course.12"/>
+    <programCourses
+        type="Mandatory"
+        course="//@course.13"/>
+    <programCourses
+        type="Mandatory"
+        course="//@course.14"/>
+    <programCourses
+        type="Mandatory"
+        course="//@course.15"/>
+  </semesters>
+  <course name="Quatum Computing"
+      code="TDT4541"
+      credit="31.0"
+      level="Super"/>
+  <course name="Visual Communication"
+      code="TPD4114"
+      credit="7.5"
+      level="Master"/>
+  <course name="Customer Driven Project"
+      code="TDT4290"
+      credit="15.0"
+      level="Master"/>
+  <course name="Advanced Software Design"
+      code="TDT4250"
+      credit="7.5"
+      level="Master"/>
+  <course name="ITGK"
+      code="TDT4110"
+      credit="10.0"
+      level="Nivå 1"/>
+  <course name="Matematikk 1"
+      code="TMA4100"
+      credit="10.0"
+      level="Nivå 1"/>
+  <course name="Diskret Matematikk"
+      code="TMA4140"
+      credit="10.0"
+      level="Nivå 1"/>
+  <course name="Objektorientert"
+      code="TDT4100"
+      credit="7.5"
+      level="Nivå 1"/>
+  <course name="ITGK"
+      code="TDT4110"
+      credit="10.0"
+      level="Nivå 1"/>
+  <course name="Proglab 1"
+      code="TDT4112"
+      credit="7.5"
+      level="Nivå 1"/>
+  <course name="Krets- og digitalteknikk"
+      code="TFE4101"
+      credit="7.5"
+      level="Nivå 1"/>
+  <course name="Matematikk 3"
+      code="TMA4115"
+      credit="7.5"
+      level="Nivå 1"/>
+  <course name="Databases "
+      code="TDT4145"
+      credit="7.5"
+      level="Second Level"/>
+  <course name="Proglab 2"
+      code="TDT4112"
+      credit="7.5"
+      level="Second Level"/>
+  <course name="Kommunikasjon, Tjenester og Nett"
+      code="TDT4160"
+      credit="7.5"
+      level="Second Level"/>
+  <course name="Programvareutvikling"
+      code="TDT4220"
+      credit="7.5"
+      level="Second Level"/>
+</no.tdt4250.assignment.studyProgramme:Programme>

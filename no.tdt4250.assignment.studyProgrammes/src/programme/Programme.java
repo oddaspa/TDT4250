@@ -18,9 +18,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link programme.Programme#getName <em>Name</em>}</li>
  *   <li>{@link programme.Programme#getCode <em>Code</em>}</li>
  *   <li>{@link programme.Programme#getSemesters <em>Semesters</em>}</li>
- *   <li>{@link programme.Programme#getProgramCourses <em>Program Courses</em>}</li>
  *   <li>{@link programme.Programme#getDuration <em>Duration</em>}</li>
  *   <li>{@link programme.Programme#getSpecialisations <em>Specialisations</em>}</li>
+ *   <li>{@link programme.Programme#getCourse <em>Course</em>}</li>
  * </ul>
  *
  * @see programme.ProgrammePackage#getProgramme()
@@ -85,18 +85,6 @@ public interface Programme extends EObject {
 	EList<Semester> getSemesters();
 
 	/**
-	 * Returns the value of the '<em><b>Program Courses</b></em>' containment reference list.
-	 * The list contents are of type {@link programme.ProgrammeCourse}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Program Courses</em>' containment reference list.
-	 * @see programme.ProgrammePackage#getProgramme_ProgramCourses()
-	 * @model containment="true" required="true" upper="2"
-	 * @generated
-	 */
-	EList<ProgrammeCourse> getProgramCourses();
-
-	/**
 	 * Returns the value of the '<em><b>Duration</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -129,5 +117,17 @@ public interface Programme extends EObject {
 	 * @generated
 	 */
 	EList<Specialisation> getSpecialisations();
+
+	/**
+	 * Returns the value of the '<em><b>Course</b></em>' containment reference list.
+	 * The list contents are of type {@link programme.Course}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Course</em>' containment reference list.
+	 * @see programme.ProgrammePackage#getProgramme_Course()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	EList<Course> getCourse();
 
 } // Programme

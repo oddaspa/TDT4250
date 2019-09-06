@@ -124,14 +124,14 @@ public class ProgrammeValidator extends EObjectValidator {
 	 * Validates the codeLength constraint of '<em>Course</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean validateCourse_codeLength(Course course, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO implement the constraint
 		// -> specify the condition that violates the constraint
 		// -> verify the diagnostic details, including severity, code, and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
+		if (! hasOnlyCorrectStructure(course)) {
 			if (diagnostics != null) {
 				diagnostics.add
 					(createDiagnostic
@@ -147,12 +147,13 @@ public class ProgrammeValidator extends EObjectValidator {
 		}
 		return true;
 	}
-	private boolean hasOnlyCorrectStructure(String code){
-		if (code.length()!= 7) {
+	private boolean hasOnlyCorrectStructure(Course course){
+		String courseCode = course.getCode();
+		if (courseCode.length()!= 7) {
 			return false;
 		}
-		String characters = code.substring(0, 2);
-		String digits = code.substring(2);
+		String characters = courseCode.substring(0, 2);
+		String digits = courseCode.substring(2);
 		if(! hasOnlyNameCharacters(characters)) {
 			return false;
 		}
@@ -195,7 +196,45 @@ public class ProgrammeValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateSemester(Semester semester, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(semester, diagnostics, context);
+		if (!validate_NoCircularContainment(semester, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(semester, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(semester, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(semester, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(semester, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(semester, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(semester, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(semester, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(semester, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSemester_totalCreditsValidation(semester, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * Validates the totalCreditsValidation constraint of '<em>Semester</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSemester_totalCreditsValidation(Semester semester, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO implement the constraint
+		// -> specify the condition that violates the constraint
+		// -> verify the diagnostic details, including severity, code, and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(createDiagnostic
+						(Diagnostic.ERROR,
+						 DIAGNOSTIC_SOURCE,
+						 0,
+						 "_UI_GenericConstraint_diagnostic",
+						 new Object[] { "totalCreditsValidation", getObjectLabel(semester, context) },
+						 new Object[] { semester },
+						 context));
+			}
+			return false;
+		}
+		return true;
 	}
 
 	/**

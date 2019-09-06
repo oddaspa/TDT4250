@@ -3,8 +3,6 @@
 package programme.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -23,23 +21,13 @@ import programme.ProgrammePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link programme.impl.ProgrammeCourseImpl#getCourse <em>Course</em>}</li>
  *   <li>{@link programme.impl.ProgrammeCourseImpl#getType <em>Type</em>}</li>
+ *   <li>{@link programme.impl.ProgrammeCourseImpl#getCourse <em>Course</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ProgrammeCourseImpl extends MinimalEObjectImpl.Container implements ProgrammeCourse {
-	/**
-	 * The cached value of the '{@link #getCourse() <em>Course</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCourse()
-	 * @generated
-	 * @ordered
-	 */
-	protected Course course;
-
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -59,6 +47,16 @@ public class ProgrammeCourseImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected String type = TYPE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getCourse() <em>Course</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCourse()
+	 * @generated
+	 * @ordered
+	 */
+	protected Course course;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -86,6 +84,14 @@ public class ProgrammeCourseImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	public Course getCourse() {
+		if (course != null && course.eIsProxy()) {
+			InternalEObject oldCourse = (InternalEObject)course;
+			course = (Course)eResolveProxy(oldCourse);
+			if (course != oldCourse) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProgrammePackage.PROGRAMME_COURSE__COURSE, oldCourse, course));
+			}
+		}
 		return course;
 	}
 
@@ -94,14 +100,8 @@ public class ProgrammeCourseImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCourse(Course newCourse, NotificationChain msgs) {
-		Course oldCourse = course;
-		course = newCourse;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ProgrammePackage.PROGRAMME_COURSE__COURSE, oldCourse, newCourse);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public Course basicGetCourse() {
+		return course;
 	}
 
 	/**
@@ -111,17 +111,10 @@ public class ProgrammeCourseImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	public void setCourse(Course newCourse) {
-		if (newCourse != course) {
-			NotificationChain msgs = null;
-			if (course != null)
-				msgs = ((InternalEObject)course).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ProgrammePackage.PROGRAMME_COURSE__COURSE, null, msgs);
-			if (newCourse != null)
-				msgs = ((InternalEObject)newCourse).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ProgrammePackage.PROGRAMME_COURSE__COURSE, null, msgs);
-			msgs = basicSetCourse(newCourse, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProgrammePackage.PROGRAMME_COURSE__COURSE, newCourse, newCourse));
+		Course oldCourse = course;
+		course = newCourse;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProgrammePackage.PROGRAMME_COURSE__COURSE, oldCourse, course));
 	}
 
 	/**
@@ -153,26 +146,13 @@ public class ProgrammeCourseImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ProgrammePackage.PROGRAMME_COURSE__COURSE:
-				return basicSetCourse(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ProgrammePackage.PROGRAMME_COURSE__COURSE:
-				return getCourse();
 			case ProgrammePackage.PROGRAMME_COURSE__TYPE:
 				return getType();
+			case ProgrammePackage.PROGRAMME_COURSE__COURSE:
+				if (resolve) return getCourse();
+				return basicGetCourse();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -185,11 +165,11 @@ public class ProgrammeCourseImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ProgrammePackage.PROGRAMME_COURSE__COURSE:
-				setCourse((Course)newValue);
-				return;
 			case ProgrammePackage.PROGRAMME_COURSE__TYPE:
 				setType((String)newValue);
+				return;
+			case ProgrammePackage.PROGRAMME_COURSE__COURSE:
+				setCourse((Course)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -203,11 +183,11 @@ public class ProgrammeCourseImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ProgrammePackage.PROGRAMME_COURSE__COURSE:
-				setCourse((Course)null);
-				return;
 			case ProgrammePackage.PROGRAMME_COURSE__TYPE:
 				setType(TYPE_EDEFAULT);
+				return;
+			case ProgrammePackage.PROGRAMME_COURSE__COURSE:
+				setCourse((Course)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -221,10 +201,10 @@ public class ProgrammeCourseImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ProgrammePackage.PROGRAMME_COURSE__COURSE:
-				return course != null;
 			case ProgrammePackage.PROGRAMME_COURSE__TYPE:
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+			case ProgrammePackage.PROGRAMME_COURSE__COURSE:
+				return course != null;
 		}
 		return super.eIsSet(featureID);
 	}

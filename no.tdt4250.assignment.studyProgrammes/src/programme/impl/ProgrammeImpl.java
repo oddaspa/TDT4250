@@ -18,8 +18,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import programme.Course;
 import programme.Programme;
-import programme.ProgrammeCourse;
 import programme.ProgrammePackage;
 import programme.Semester;
 import programme.Specialisation;
@@ -35,9 +35,9 @@ import programme.Specialisation;
  *   <li>{@link programme.impl.ProgrammeImpl#getName <em>Name</em>}</li>
  *   <li>{@link programme.impl.ProgrammeImpl#getCode <em>Code</em>}</li>
  *   <li>{@link programme.impl.ProgrammeImpl#getSemesters <em>Semesters</em>}</li>
- *   <li>{@link programme.impl.ProgrammeImpl#getProgramCourses <em>Program Courses</em>}</li>
  *   <li>{@link programme.impl.ProgrammeImpl#getDuration <em>Duration</em>}</li>
  *   <li>{@link programme.impl.ProgrammeImpl#getSpecialisations <em>Specialisations</em>}</li>
+ *   <li>{@link programme.impl.ProgrammeImpl#getCourse <em>Course</em>}</li>
  * </ul>
  *
  * @generated
@@ -94,16 +94,6 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 	protected EList<Semester> semesters;
 
 	/**
-	 * The cached value of the '{@link #getProgramCourses() <em>Program Courses</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProgramCourses()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ProgrammeCourse> programCourses;
-
-	/**
 	 * The default value of the '{@link #getDuration() <em>Duration</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -132,6 +122,16 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 	 * @ordered
 	 */
 	protected EList<Specialisation> specialisations;
+
+	/**
+	 * The cached value of the '{@link #getCourse() <em>Course</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCourse()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Course> course;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -217,19 +217,6 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 	 * @generated
 	 */
 	@Override
-	public EList<ProgrammeCourse> getProgramCourses() {
-		if (programCourses == null) {
-			programCourses = new EObjectContainmentEList<ProgrammeCourse>(ProgrammeCourse.class, this, ProgrammePackage.PROGRAMME__PROGRAM_COURSES);
-		}
-		return programCourses;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public int getDuration() {
 		return duration;
 	}
@@ -266,14 +253,27 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 	 * @generated
 	 */
 	@Override
+	public EList<Course> getCourse() {
+		if (course == null) {
+			course = new EObjectContainmentEList<Course>(Course.class, this, ProgrammePackage.PROGRAMME__COURSE);
+		}
+		return course;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ProgrammePackage.PROGRAMME__SEMESTERS:
 				return ((InternalEList<?>)getSemesters()).basicRemove(otherEnd, msgs);
-			case ProgrammePackage.PROGRAMME__PROGRAM_COURSES:
-				return ((InternalEList<?>)getProgramCourses()).basicRemove(otherEnd, msgs);
 			case ProgrammePackage.PROGRAMME__SPECIALISATIONS:
 				return ((InternalEList<?>)getSpecialisations()).basicRemove(otherEnd, msgs);
+			case ProgrammePackage.PROGRAMME__COURSE:
+				return ((InternalEList<?>)getCourse()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -292,12 +292,12 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 				return getCode();
 			case ProgrammePackage.PROGRAMME__SEMESTERS:
 				return getSemesters();
-			case ProgrammePackage.PROGRAMME__PROGRAM_COURSES:
-				return getProgramCourses();
 			case ProgrammePackage.PROGRAMME__DURATION:
 				return getDuration();
 			case ProgrammePackage.PROGRAMME__SPECIALISATIONS:
 				return getSpecialisations();
+			case ProgrammePackage.PROGRAMME__COURSE:
+				return getCourse();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -321,16 +321,16 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 				getSemesters().clear();
 				getSemesters().addAll((Collection<? extends Semester>)newValue);
 				return;
-			case ProgrammePackage.PROGRAMME__PROGRAM_COURSES:
-				getProgramCourses().clear();
-				getProgramCourses().addAll((Collection<? extends ProgrammeCourse>)newValue);
-				return;
 			case ProgrammePackage.PROGRAMME__DURATION:
 				setDuration((Integer)newValue);
 				return;
 			case ProgrammePackage.PROGRAMME__SPECIALISATIONS:
 				getSpecialisations().clear();
 				getSpecialisations().addAll((Collection<? extends Specialisation>)newValue);
+				return;
+			case ProgrammePackage.PROGRAMME__COURSE:
+				getCourse().clear();
+				getCourse().addAll((Collection<? extends Course>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -353,14 +353,14 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 			case ProgrammePackage.PROGRAMME__SEMESTERS:
 				getSemesters().clear();
 				return;
-			case ProgrammePackage.PROGRAMME__PROGRAM_COURSES:
-				getProgramCourses().clear();
-				return;
 			case ProgrammePackage.PROGRAMME__DURATION:
 				setDuration(DURATION_EDEFAULT);
 				return;
 			case ProgrammePackage.PROGRAMME__SPECIALISATIONS:
 				getSpecialisations().clear();
+				return;
+			case ProgrammePackage.PROGRAMME__COURSE:
+				getCourse().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -380,12 +380,12 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 				return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
 			case ProgrammePackage.PROGRAMME__SEMESTERS:
 				return semesters != null && !semesters.isEmpty();
-			case ProgrammePackage.PROGRAMME__PROGRAM_COURSES:
-				return programCourses != null && !programCourses.isEmpty();
 			case ProgrammePackage.PROGRAMME__DURATION:
 				return duration != DURATION_EDEFAULT;
 			case ProgrammePackage.PROGRAMME__SPECIALISATIONS:
 				return specialisations != null && !specialisations.isEmpty();
+			case ProgrammePackage.PROGRAMME__COURSE:
+				return course != null && !course.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

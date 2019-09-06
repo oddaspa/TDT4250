@@ -2,21 +2,21 @@
  */
 package programme.impl;
 
-import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import programme.ProgrammeCourse;
 import programme.ProgrammePackage;
 import programme.Semester;
@@ -58,7 +58,7 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	protected int position = POSITION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getProgramCourses() <em>Program Courses</em>}' reference list.
+	 * The cached value of the '{@link #getProgramCourses() <em>Program Courses</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getProgramCourses()
@@ -127,7 +127,7 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	@Override
 	public EList<ProgrammeCourse> getProgramCourses() {
 		if (programCourses == null) {
-			programCourses = new EObjectResolvingEList<ProgrammeCourse>(ProgrammeCourse.class, this, ProgrammePackage.SEMESTER__PROGRAM_COURSES);
+			programCourses = new EObjectContainmentEList<ProgrammeCourse>(ProgrammeCourse.class, this, ProgrammePackage.SEMESTER__PROGRAM_COURSES);
 		}
 		return programCourses;
 	}
@@ -135,11 +135,25 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public float getTotalCredits() {
-		// TODO: implement this method to return the 'Total Credits' attribute
+		float total = 0;
+		for(int i=0; i< this.getProgramCourses().size(); i++) {
+			total += this.getProgramCourses().get(i).getCourse().getCredit();
+		}
+		return total;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setTotalCredits(float newTotalCredits) {
+		// TODO: implement this method to set the 'Total Credits' attribute
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
@@ -150,10 +164,12 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	 * @generated
 	 */
 	@Override
-	public void creditsNeededShouldBe30() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ProgrammePackage.SEMESTER__PROGRAM_COURSES:
+				return ((InternalEList<?>)getProgramCourses()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -190,6 +206,9 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 				getProgramCourses().clear();
 				getProgramCourses().addAll((Collection<? extends ProgrammeCourse>)newValue);
 				return;
+			case ProgrammePackage.SEMESTER__TOTAL_CREDITS:
+				setTotalCredits((Float)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -207,6 +226,9 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 				return;
 			case ProgrammePackage.SEMESTER__PROGRAM_COURSES:
 				getProgramCourses().clear();
+				return;
+			case ProgrammePackage.SEMESTER__TOTAL_CREDITS:
+				setTotalCredits(TOTAL_CREDITS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -228,21 +250,6 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 				return getTotalCredits() != TOTAL_CREDITS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case ProgrammePackage.SEMESTER___CREDITS_NEEDED_SHOULD_BE30:
-				creditsNeededShouldBe30();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

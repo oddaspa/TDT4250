@@ -21,7 +21,8 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see programme.ProgrammePackage#getSemester()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='totalCreditsValidation'"
+ *        annotation="http://www.eclips.org/emf/acceleo/query/1.0 totalCreditsValidation='self.programCourses.course.credit -&gt; sum() == 30.0'"
  * @generated
  */
 public interface Semester extends EObject {
@@ -48,13 +49,13 @@ public interface Semester extends EObject {
 	void setPosition(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Program Courses</b></em>' reference list.
+	 * Returns the value of the '<em><b>Program Courses</b></em>' containment reference list.
 	 * The list contents are of type {@link programme.ProgrammeCourse}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Program Courses</em>' reference list.
+	 * @return the value of the '<em>Program Courses</em>' containment reference list.
 	 * @see programme.ProgrammePackage#getSemester_ProgramCourses()
-	 * @model required="true" upper="2"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<ProgrammeCourse> getProgramCourses();
@@ -64,18 +65,21 @@ public interface Semester extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Total Credits</em>' attribute.
+	 * @see #setTotalCredits(float)
 	 * @see programme.ProgrammePackage#getSemester_TotalCredits()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @model transient="true" volatile="true" derived="true"
 	 * @generated
 	 */
 	float getTotalCredits();
 
 	/**
+	 * Sets the value of the '{@link programme.Semester#getTotalCredits <em>Total Credits</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @param value the new value of the '<em>Total Credits</em>' attribute.
+	 * @see #getTotalCredits()
 	 * @generated
 	 */
-	void creditsNeededShouldBe30();
+	void setTotalCredits(float value);
 
 } // Semester

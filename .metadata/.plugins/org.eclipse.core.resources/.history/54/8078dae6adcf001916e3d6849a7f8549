@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<no.tdt4250.assignment.studyProgramme:Programme
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:no.tdt4250.assignment.studyProgramme="http://no/tdt4250/assignment/studyProgramme"
+    xsi:schemaLocation="http://no/tdt4250/assignment/studyProgramme programme.ecore"
+    name="Master Computer Science"
+    code="MTDT"
+    Duration="10">
+  <semesters
+      position="7"
+        <programCourses
+      type="Specialisation">
+  </semesters>
+  <semesters
+      position="1"/>
+  <semesters
+      position="2"/>
+  <semesters
+      position="3"/>
+    <course
+        name="Quatum Computing"
+        code="TDT4541"
+        credit="31.0"
+        level="Super"/>
+  <programCourses
+      type="Complementary">
+    <course
+        name="Visual Communication"
+        code="TPD4114"
+        credit="7.5"
+        level="Master"/>
+  </programCourses>
+  <programCourses
+      type="Mandatory">
+    <course
+        name="Customer Driven Project"
+        code="TDT4290"
+        credit="15.0"
+        level="Master"/>
+  </programCourses>
+  <programCourses
+      type="Mandatory">
+    <course
+        name="Advanced Software Design"
+        code="TDT4250"
+        credit="7.5"
+        level="Master"/>
+  </programCourses>
+</no.tdt4250.assignment.studyProgramme:Programme>

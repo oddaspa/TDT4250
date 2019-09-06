@@ -4,7 +4,6 @@ package programme;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -22,6 +21,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see programme.ProgrammeFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore validationDelegate='http://www.eclipse.org/acceleo/query/1.0'"
  * @generated
  */
 public interface ProgrammePackage extends EPackage {
@@ -159,22 +159,13 @@ public interface ProgrammePackage extends EPackage {
 	int PROGRAMME__SEMESTERS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Program Courses</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROGRAMME__PROGRAM_COURSES = 3;
-
-	/**
 	 * The feature id for the '<em><b>Duration</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAMME__DURATION = 4;
+	int PROGRAMME__DURATION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Specialisations</b></em>' containment reference list.
@@ -183,7 +174,16 @@ public interface ProgrammePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAMME__SPECIALISATIONS = 5;
+	int PROGRAMME__SPECIALISATIONS = 4;
+
+	/**
+	 * The feature id for the '<em><b>Course</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRAMME__COURSE = 5;
 
 	/**
 	 * The number of structural features of the '<em>Programme</em>' class.
@@ -223,7 +223,7 @@ public interface ProgrammePackage extends EPackage {
 	int SEMESTER__POSITION = 0;
 
 	/**
-	 * The feature id for the '<em><b>Program Courses</b></em>' reference list.
+	 * The feature id for the '<em><b>Program Courses</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -250,22 +250,13 @@ public interface ProgrammePackage extends EPackage {
 	int SEMESTER_FEATURE_COUNT = 3;
 
 	/**
-	 * The operation id for the '<em>Credits Needed Should Be30</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEMESTER___CREDITS_NEEDED_SHOULD_BE30 = 0;
-
-	/**
 	 * The number of operations of the '<em>Semester</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEMESTER_OPERATION_COUNT = 1;
+	int SEMESTER_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link programme.impl.ProgrammeCourseImpl <em>Course</em>}' class.
@@ -278,22 +269,22 @@ public interface ProgrammePackage extends EPackage {
 	int PROGRAMME_COURSE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Course</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROGRAMME_COURSE__COURSE = 0;
-
-	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAMME_COURSE__TYPE = 1;
+	int PROGRAMME_COURSE__TYPE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Course</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRAMME_COURSE__COURSE = 1;
 
 	/**
 	 * The number of structural features of the '<em>Course</em>' class.
@@ -458,17 +449,6 @@ public interface ProgrammePackage extends EPackage {
 	EReference getProgramme_Semesters();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link programme.Programme#getProgramCourses <em>Program Courses</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Program Courses</em>'.
-	 * @see programme.Programme#getProgramCourses()
-	 * @see #getProgramme()
-	 * @generated
-	 */
-	EReference getProgramme_ProgramCourses();
-
-	/**
 	 * Returns the meta object for the attribute '{@link programme.Programme#getDuration <em>Duration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -489,6 +469,17 @@ public interface ProgrammePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getProgramme_Specialisations();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link programme.Programme#getCourse <em>Course</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Course</em>'.
+	 * @see programme.Programme#getCourse()
+	 * @see #getProgramme()
+	 * @generated
+	 */
+	EReference getProgramme_Course();
 
 	/**
 	 * Returns the meta object for class '{@link programme.Semester <em>Semester</em>}'.
@@ -512,10 +503,10 @@ public interface ProgrammePackage extends EPackage {
 	EAttribute getSemester_Position();
 
 	/**
-	 * Returns the meta object for the reference list '{@link programme.Semester#getProgramCourses <em>Program Courses</em>}'.
+	 * Returns the meta object for the containment reference list '{@link programme.Semester#getProgramCourses <em>Program Courses</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Program Courses</em>'.
+	 * @return the meta object for the containment reference list '<em>Program Courses</em>'.
 	 * @see programme.Semester#getProgramCourses()
 	 * @see #getSemester()
 	 * @generated
@@ -534,16 +525,6 @@ public interface ProgrammePackage extends EPackage {
 	EAttribute getSemester_TotalCredits();
 
 	/**
-	 * Returns the meta object for the '{@link programme.Semester#creditsNeededShouldBe30() <em>Credits Needed Should Be30</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Credits Needed Should Be30</em>' operation.
-	 * @see programme.Semester#creditsNeededShouldBe30()
-	 * @generated
-	 */
-	EOperation getSemester__CreditsNeededShouldBe30();
-
-	/**
 	 * Returns the meta object for class '{@link programme.ProgrammeCourse <em>Course</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -554,10 +535,10 @@ public interface ProgrammePackage extends EPackage {
 	EClass getProgrammeCourse();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link programme.ProgrammeCourse#getCourse <em>Course</em>}'.
+	 * Returns the meta object for the reference '{@link programme.ProgrammeCourse#getCourse <em>Course</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Course</em>'.
+	 * @return the meta object for the reference '<em>Course</em>'.
 	 * @see programme.ProgrammeCourse#getCourse()
 	 * @see #getProgrammeCourse()
 	 * @generated
@@ -707,14 +688,6 @@ public interface ProgrammePackage extends EPackage {
 		EReference PROGRAMME__SEMESTERS = eINSTANCE.getProgramme_Semesters();
 
 		/**
-		 * The meta object literal for the '<em><b>Program Courses</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PROGRAMME__PROGRAM_COURSES = eINSTANCE.getProgramme_ProgramCourses();
-
-		/**
 		 * The meta object literal for the '<em><b>Duration</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -729,6 +702,14 @@ public interface ProgrammePackage extends EPackage {
 		 * @generated
 		 */
 		EReference PROGRAMME__SPECIALISATIONS = eINSTANCE.getProgramme_Specialisations();
+
+		/**
+		 * The meta object literal for the '<em><b>Course</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROGRAMME__COURSE = eINSTANCE.getProgramme_Course();
 
 		/**
 		 * The meta object literal for the '{@link programme.impl.SemesterImpl <em>Semester</em>}' class.
@@ -749,7 +730,7 @@ public interface ProgrammePackage extends EPackage {
 		EAttribute SEMESTER__POSITION = eINSTANCE.getSemester_Position();
 
 		/**
-		 * The meta object literal for the '<em><b>Program Courses</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Program Courses</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -765,14 +746,6 @@ public interface ProgrammePackage extends EPackage {
 		EAttribute SEMESTER__TOTAL_CREDITS = eINSTANCE.getSemester_TotalCredits();
 
 		/**
-		 * The meta object literal for the '<em><b>Credits Needed Should Be30</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SEMESTER___CREDITS_NEEDED_SHOULD_BE30 = eINSTANCE.getSemester__CreditsNeededShouldBe30();
-
-		/**
 		 * The meta object literal for the '{@link programme.impl.ProgrammeCourseImpl <em>Course</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -783,7 +756,7 @@ public interface ProgrammePackage extends EPackage {
 		EClass PROGRAMME_COURSE = eINSTANCE.getProgrammeCourse();
 
 		/**
-		 * The meta object literal for the '<em><b>Course</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Course</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
