@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.rmi.activation.Activator"/>
+<fullyQualifiedTypeName name="org.osgi.framework.BundleContext"/>
+<fullyQualifiedTypeName name="org.osgi.framework.ServiceReference"/>
+<fullyQualifiedTypeName name="no.tdt4250.assignment2.convertionservice.HelloService"/>
+<fullyQualifiedTypeName name="org.osgi.framework.ServiceRegistration"/>
+</qualifiedTypeNameHistroy>

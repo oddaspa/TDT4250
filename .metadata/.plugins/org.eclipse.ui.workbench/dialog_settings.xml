@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item key="dialogHeight" value="796"/>
-		<item key="dialogWidth" value="828"/>
+		<item key="dialogHeight" value="790"/>
+		<item key="dialogWidth" value="417"/>
 		<list key="orderedElements">
-			<item value="net.sourceforge.plantuml.eclipse.views.PlantUmlView"/>
-			<item value="org.eclipse.sirius.ui.tools.perspective.design"/>
 		</list>
 		<list key="orderedProviders">
-			<item value="org.eclipse.e4.ui.parts"/>
-			<item value="org.eclipse.ui.perspectives"/>
 		</list>
 		<list key="textEntries">
-			<item value="2"/>
-			<item value="1"/>
 		</list>
 		<list key="textArray">
-			<item value="plant"/>
-			<item value="pl"/>
-			<item value="sirius"/>
 		</list>
+	</section>
+	<section name="ImportExportAction">
+		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="bndtools.importProject"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="bndtools.importCategory"/>
+		</list>
+	</section>
+	<section name="InstallationDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="-205"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
+		<item key="DIALOG_WIDTH" value="695"/>
+		<item key="DIALOG_HEIGHT" value="872"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-24|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 </section>

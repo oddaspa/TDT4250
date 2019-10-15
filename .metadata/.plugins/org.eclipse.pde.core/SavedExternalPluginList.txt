@@ -1,4 +1,15 @@
-# List of external plug-in models previously loaded. Timestamp: 1567780234199
+# List of external plug-in models previously loaded. Timestamp: 1569685767623
+file:/C:/Users/oddgu/.p2/pool/plugins/biz.aQute.bnd.maven_4.2.0.201903051501.jar
+file:/C:/Users/oddgu/.p2/pool/plugins/biz.aQute.bndlib_4.2.0.201903051501.jar
+file:/C:/Users/oddgu/.p2/pool/plugins/biz.aQute.repository_4.2.0.201903051501.jar
+file:/C:/Users/oddgu/.p2/pool/plugins/biz.aQute.resolve_4.2.0.201903051501.jar
+file:/C:/Users/oddgu/.p2/pool/plugins/bndtools.api_4.2.0.201903051501.jar
+file:/C:/Users/oddgu/.p2/pool/plugins/bndtools.builder_4.2.0.201903051501.jar
+file:/C:/Users/oddgu/.p2/pool/plugins/bndtools.core_4.2.0.201903051501.jar
+file:/C:/Users/oddgu/.p2/pool/plugins/bndtools.jareditor_4.2.0.201903051501.jar
+file:/C:/Users/oddgu/.p2/pool/plugins/bndtools.m2e_4.2.0.201903051501.jar
+file:/C:/Users/oddgu/.p2/pool/plugins/bndtools.pde_4.2.0.201903051501.jar
+file:/C:/Users/oddgu/.p2/pool/plugins/bndtools.release_4.2.0.201903051501.jar
 file:/C:/Users/oddgu/.p2/pool/plugins/ch.qos.logback.classic_1.0.7.v20121108-1250.jar
 file:/C:/Users/oddgu/.p2/pool/plugins/ch.qos.logback.core_1.0.7.v20121108-1250.jar
 file:/C:/Users/oddgu/.p2/pool/plugins/ch.qos.logback.slf4j_1.0.7.v201505121915.jar
@@ -74,6 +85,14 @@ file:/C:/Users/oddgu/.p2/pool/plugins/org.apache.xml.resolver_1.2.0.v20100508040
 file:/C:/Users/oddgu/.p2/pool/plugins/org.apache.xml.serializer_2.7.1.v201005080400.jar
 file:/C:/Users/oddgu/.p2/pool/plugins/org.apache.xmlgraphics_2.3.0.v20190515-0436.jar
 file:/C:/Users/oddgu/.p2/pool/plugins/org.apiguardian_1.0.0.v20190212-2109.jar
+file:/C:/Users/oddgu/.p2/pool/plugins/org.bndtools.embeddedrepo_4.2.0.201903051501.jar
+file:/C:/Users/oddgu/.p2/pool/plugins/org.bndtools.headless.build.manager_4.2.0.201903051501.jar
+file:/C:/Users/oddgu/.p2/pool/plugins/org.bndtools.headless.build.plugin.ant_4.2.0.201903051501.jar
+file:/C:/Users/oddgu/.p2/pool/plugins/org.bndtools.headless.build.plugin.gradle_4.2.0.201903051501.jar
+file:/C:/Users/oddgu/.p2/pool/plugins/org.bndtools.templating_4.2.0.201903051501.jar
+file:/C:/Users/oddgu/.p2/pool/plugins/org.bndtools.templating.gitrepo_4.2.0.201903051501.jar
+file:/C:/Users/oddgu/.p2/pool/plugins/org.bndtools.versioncontrol.ignores.manager_4.2.0.201903051501.jar
+file:/C:/Users/oddgu/.p2/pool/plugins/org.bndtools.versioncontrol.ignores.plugin.git_4.2.0.201903051501.jar
 file:/C:/Users/oddgu/.p2/pool/plugins/org.bouncycastle.bcpg_1.61.0.v20190602-1335.jar
 file:/C:/Users/oddgu/.p2/pool/plugins/org.bouncycastle.bcpkix_1.61.0.v20190602-1335.jar
 file:/C:/Users/oddgu/.p2/pool/plugins/org.bouncycastle.bcprov_1.61.0.v20190602-1335.jar

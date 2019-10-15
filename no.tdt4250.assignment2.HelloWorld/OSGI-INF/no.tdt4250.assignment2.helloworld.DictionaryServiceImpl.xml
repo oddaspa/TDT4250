@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="no.tdt4250.assignment2.helloworld.DictionaryServiceImpl">
+   <service>
+      <provide interface="no.tdt4250.assignment2.helloworld.DictionaryService"/>
+   </service>
+   <reference bind="registerDictionary" interface="no.tdt4250.assignment2.helloworld.Dictionary" name="registerDictionary" unbind="unregisterDictionary"/>
+   <implementation class="no.tdt4250.assignment2.helloworld.DictionaryServiceImpl"/>
+</scr:component>

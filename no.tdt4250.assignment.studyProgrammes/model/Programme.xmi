@@ -1,67 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<no.tdt4250.assignment.studyProgramme:Programme
+<no.tdt4250.assignment.studyProgramme:Department
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:no.tdt4250.assignment.studyProgramme="http://no/tdt4250/assignment/studyProgramme"
-    xsi:schemaLocation="http://no/tdt4250/assignment/studyProgramme programme.ecore"
-    name="Master Computer Science"
-    code="MTDT"
-    Duration="10">
-  <semesters
-      position="7">
-    <programCourses
-        type="Complementary"
-        course="//@course.1"/>
-    <programCourses
-        type="Mandatory"
-        course="//@course.2"/>
-    <programCourses
-        type="Mandatory"
-        course="//@course.3"/>
-  </semesters>
-  <semesters
-      position="1">
-    <programCourses
-        type="Mandatory"
-        course="//@course.8"/>
-    <programCourses
-        type="Mandatory"
-        course="//@course.5"/>
-    <programCourses
-        type="Mandatory"
-        course="//@course.6"/>
-  </semesters>
-  <semesters
-      position="2">
-    <programCourses
-        type="Mandatory"
-        course="//@course.7"/>
-    <programCourses
-        type="Mandatory"
-        course="//@course.9"/>
-    <programCourses
-        type="Mandatory"
-        course="//@course.10"/>
-    <programCourses
-        type="Mandatory"
-        course="//@course.11"/>
-  </semesters>
-  <semesters
-      position="3">
-    <programCourses
-        type="Mandatory"
-        course="//@course.12"/>
-    <programCourses
-        type="Mandatory"
-        course="//@course.13"/>
-    <programCourses
-        type="Mandatory"
-        course="//@course.14"/>
-    <programCourses
-        type="Mandatory"
-        course="//@course.15"/>
-  </semesters>
+    xsi:schemaLocation="http://no/tdt4250/assignment/studyProgramme structure.ecore"
+    name="Department of Computer Science"
+    code="IDI">
   <course name="Quatum Computing"
       code="TDT4541"
       credit="31.0"
@@ -126,4 +71,8 @@
       code="TDT4220"
       credit="7.5"
       level="Second Level"/>
-</no.tdt4250.assignment.studyProgramme:Programme>
+  <programmes
+      name="Master Computer Science"
+      code="MTDT"
+      Duration="10"/>
+</no.tdt4250.assignment.studyProgramme:Department>

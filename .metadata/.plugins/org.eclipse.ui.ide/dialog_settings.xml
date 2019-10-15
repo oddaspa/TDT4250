@@ -1,3 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\oddgu\Programmering\TDT4250\hallvard\examples\dict-ws\tdt4250.dict2.core"/>
+		<item value="C:\Users\oddgu\Programmering\TDT4250\hallvard\examples\dict-ws\tdt4250.dict2.servlet"/>
+		<item value="C:\Users\oddgu\Programmering\TDT4250\hallvard\examples\dict-ws\tdt4250.dict1.servlet.test"/>
+		<item value="C:\Users\oddgu\Programmering\TDT4250\hallvard\examples\dict-ws\tdt4250.dict1.servlet"/>
+		<item value="C:\Users\oddgu\Programmering\TDT4250\hallvard\examples\dict-ws"/>
+	</list>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.pde.ui.NewProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+		</list>
+	</section>
+	<section name="CleanDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="396"/>
+		<item key="DIALOG_Y_ORIGIN" value="183"/>
+		<item key="DIALOG_WIDTH" value="576"/>
+		<item key="DIALOG_HEIGHT" value="380"/>
+		<item key="TOGGLE_SELECTED" value="false"/>
+	</section>
 </section>

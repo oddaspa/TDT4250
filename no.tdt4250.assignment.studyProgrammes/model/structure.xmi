@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<no.tdt4250.assignment.studyProgramme:Department
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:no.tdt4250.assignment.studyProgramme="http://no/tdt4250/assignment/studyProgramme"
+    xsi:schemaLocation="http://no/tdt4250/assignment/studyProgramme structure.ecore"
+    name="Department of Computer Science"
+    code="IDI">
+  <course name="Ex. Phil"
+      code="EXPH0004"
+      credit="7.5"
+      level="Nivå 1"/>
+  <course name="ITGK"
+      code="TDT4110"
+      credit="10.0"
+      level="Nivå 1"/>
+  <course name="Matematikk 1"
+      code="TMA4100"
+      credit="10.0"
+      level="Nivå 1"/>
+  <course name="Diskret Matematikk"
+      code="TMA4140"
+      credit="10.0"
+      level="Nivå 1"/>
+  <course name="Objektorientert"
+      code="TDT4100"
+      credit="7.5"
+      level="Nivå 1"/>
+  <course name="Proglab 1"
+      code="TDT4112"
+      credit="7.5"
+      level="Nivå 1"/>
+  <course name="Krets- og digitalteknikk"
+      code="TFE4101"
+      credit="7.5"
+      level="Nivå 1"/>
+  <course name="Matematikk 3"
+      code="TMA4115"
+      credit="7.5"
+      level="Nivå 1"/>
+  <course name="Programmeringsprosjekt"
+      code="TDT4113"
+      credit="7.5"
+      level="Nivå 2"/>
+  <course name="Algoritmer og datastrukturer"
+      code="TDT4120"
+      credit="7.5"
+      level="Nivå 2"/>
+  <course name="Datamaskiner og digitalteknikk"
+      code="TDT4160"
+      credit="7.5"
+      level="Nivå 2"/>
+  <course name="Statistikk"
+      code="TMA4240"
+      credit="7.5"
+      level="Nivå 2"/>
+  <course name="Programvareutvikling"
+      code="TDT4220"
+      credit="7.5"
+      level="Nivå 2"/>
+  <course name="Datamodellering og databasesystemer"
+      code="TDT4145"
+      credit="7.5"
+      level="Nivå 2"/>
+  <course name="Menneske og maskin-interaksjon"
+      code="TDT4180"
+      credit="7.5"
+      level="Nivå 2"/>
+  <course name="Kommunikasjon, Tjenester og Nett"
+      code="TDT4160"
+      credit="7.5"
+      level="Nivå 2"/>
+  <course name="Introduksjon til kunstig intelligens"
+      code="TDT4136"
+      credit="7.5"
+      level="Nivå 3"/>
+  <course name="Informasjonssystemer"
+      code="TDT4175"
+      credit="7.5"
+      level="Nivå 3"/>
+  <course name="Matematikk 4D"
+      code="TMA4135"
+      credit="7.5"
+      level="Nivå 3"/>
+  <course name="Webutvikling"
+      code="IT2810"
+      credit="7.5"
+      level="Nivå 3"/>
+  <course name="Kognitive arkitekturer"
+      code="TDT4137"
+      credit="7.5"
+      level="Nivå 3"/>
+  <course name="Operativsystemer"
+      code="TDT4186"
+      credit="7.5"
+      level="Nivå 3"/>
+  <course name="Programvarearkitektur"
+      code="TDT4240"
+      credit="7.5"
+      level="Nivå 3"/>
+  <course name="Fysikk"
+      code="TFY4125"
+      credit="7.5"
+      level="Nivå 3"/>
+  <course name="Teknologiledelse"
+      code="TIØ4258"
+      credit="7.5"
+      level="Nivå 3"/>
+  <course name="Visual Communication"
+      code="TPD4114"
+      credit="7.5"
+      level="Nivå 4"/>
+  <course name="Customer Driven Project"
+      code="TDT4290"
+      credit="15.0"
+      level="Master"/>
+  <course name="Advanced Software Design"
+      code="TDT4250"
+      credit="7.5"
+      level="Nivå 4"/>
+  <course name="Avansert Programvareutvikling"
+      code="TDT4242"
+      credit="7.5"
+      level="Nivå 4"/>
+  <course name="Anbefalsingssystemer"
+      code="TDT4215"
+      credit="7.5"
+      level="Nivå 4"/>
+  <course name="Programvaresikkerhet"
+      code="TDT4237"
+      credit="7.5"
+      level="Nivå 4"/>
+  <course name="Samhandlingsteknologi og sosiale medier"
+      code="TDT4245"
+      credit="7.5"
+      level="Nivå 4"/>
+  <programmes
+      name="Master Computer Science"
+      code="MTDT"
+      Duration="10">
+    <semesters
+        position="1">
+      <programCourses
+          course="//@course.2"/>
+      <programCourses
+          course="//@course.1"/>
+      <programCourses
+          course="//@course.3"/>
+    </semesters>
+    <semesters
+        position="2"
+        Season="Spring">
+      <programCourses
+          course="//@course.4"/>
+      <programCourses
+          course="//@course.5"/>
+      <programCourses
+          course="//@course.6"/>
+      <programCourses
+          course="//@course.7"/>
+    </semesters>
+    <semesters
+        position="3">
+      <programCourses
+          course="//@course.8"/>
+      <programCourses
+          course="//@course.9"/>
+      <programCourses
+          course="//@course.10"/>
+      <programCourses
+          course="//@course.11"/>
+    </semesters>
+    <semesters
+        position="4">
+      <programCourses
+          course="//@course.12"/>
+      <programCourses
+          course="//@course.13"/>
+      <programCourses
+          course="//@course.14"/>
+      <programCourses
+          course="//@course.15"/>
+    </semesters>
+    <semesters
+        position="5">
+      <programCourses
+          course="//@course.16"/>
+      <programCourses
+          course="//@course.17"/>
+      <programCourses
+          course="//@course.18"/>
+      <programCourses
+          type="Elective"
+          course="//@course.19"/>
+      <programCourses
+          type="Elective"
+          course="//@course.20"/>
+    </semesters>
+    <semesters
+        position="6">
+      <programCourses
+          course="//@course.21"/>
+      <programCourses
+          course="//@course.22"/>
+      <programCourses
+          course="//@course.23"/>
+      <programCourses
+          course="//@course.24"/>
+    </semesters>
+    <semesters
+        position="7">
+      <programCourses
+          course="//@course.27"/>
+      <programCourses
+          course="//@course.26"/>
+      <programCourses
+          type="Elective"
+          course="//@course.25"/>
+    </semesters>
+    <semesters
+        position="8">
+      <programCourses
+          course="//@course.28"/>
+      <programCourses
+          type="Elective"
+          course="//@course.29"/>
+      <programCourses
+          type="Elective"
+          course="//@course.30"/>
+      <programCourses
+          type="Elective"
+          course="//@course.31"/>
+    </semesters>
+    <semesters
+        position="9"/>
+    <semesters
+        position="10"/>
+    <specialisations
+        name="Programvaresystemer"
+        semesters="//@programmes.0/@semesters.4 //@programmes.0/@semesters.5">
+      <mainProfiles
+          name="Digital Virksomhetsutvikling"/>
+      <mainProfiles
+          name="Interaksjonsdesign "/>
+      <mainProfiles
+          name="Programvareutvikling"
+          semesters="//@programmes.0/@semesters.6 //@programmes.0/@semesters.7 //@programmes.0/@semesters.8 //@programmes.0/@semesters.9"/>
+    </specialisations>
+  </programmes>
+</no.tdt4250.assignment.studyProgramme:Department>
