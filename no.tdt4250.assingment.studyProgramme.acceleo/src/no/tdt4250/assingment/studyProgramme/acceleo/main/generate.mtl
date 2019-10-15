@@ -1,0 +1,69 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module generate('no.tdt4250.assignment.studyProgrammes/model/structure.ecore', 'http://www.eclipse.org/emf/2002/Ecore')]
+
+
+[**
+ * The documentation of the template generateElement.
+ * @param anEClass
+ */]
+[template public generateHtml(department : Department)]
+[comment @main /]
+[file (department.name.concat('.html'), false, 'UTF-8')]
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>[department.code/] Courses</title>
+<style>
+div { padding: 16px; }
+</style>
+</head>
+
+<body>
+
+<h1> [department.programmes.name/] </h1>
+
+[for (programme : Programme | department.programmes)]
+	[generateBoard(programme)/]
+	<hline/><br/>
+[/for]
+
+</body>
+</html>
+	[/file]
+[/template]
+
+[template public generateBoard(programme: Programme)]
+	[for(semester : Semester | programme.semesters)]
+	<div class="semester--block">
+		[if (semester.Season.toString()='Fall')]
+			<h2>[semester.position/]. year</h2>
+			<hr>
+			[if (semester.position=5)]
+				<h2>[programme.specialisations.name/]</h2>
+				<hr>
+			[/if]
+		[/if]
+		
+		<h2>[semester.Season/]    [semester.position/]. year</h2>
+		<table class="studyInstance">
+			<tr>
+    			<th>Emnekode</th>
+    			<th>Emnenavn</th>
+    			<th>SP</th>
+				<th>Status</th>
+  			</tr>
+			[for (programmeCourse: ProgrammeCourse | semester.programCourses)]
+			<tr>
+				<td>[programmeCourse.course.code /] </td>
+				<td>[programmeCourse.course.name /] </td>
+				<td>[programmeCourse.course.credit /]</td>
+				<td>[programmeCourse.type /]</td> 
+			</tr>
+			[/for]
+		</table>
+	</div>
+	[/for]
+[/template]

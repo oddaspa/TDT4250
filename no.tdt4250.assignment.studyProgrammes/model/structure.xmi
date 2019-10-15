@@ -135,6 +135,22 @@
       code="TDT4245"
       credit="7.5"
       level="Nivå 4"/>
+  <course name="Datateknologi, fordypningsprosjekt"
+      code="TDT4501"
+      credit="15.0"
+      level="Nivå 5"/>
+  <course name="Datateknologi, fordypningsemne"
+      code="TDT4506"
+      credit="7.5"
+      level="Nivå 5"/>
+  <course name="Arkitektur som teknologisk praksis"
+      code="AAR4250"
+      credit="7.5"
+      level="Nivå 5"/>
+  <course name="Datateknologi, masteroppgave"
+      code="TDT4900"
+      credit="30.0"
+      level="Nivå 5"/>
   <programmes
       name="Master Computer Science"
       code="MTDT"
@@ -172,7 +188,8 @@
           course="//@course.11"/>
     </semesters>
     <semesters
-        position="4">
+        position="4"
+        Season="Spring">
       <programCourses
           course="//@course.12"/>
       <programCourses
@@ -198,7 +215,8 @@
           course="//@course.20"/>
     </semesters>
     <semesters
-        position="6">
+        position="6"
+        Season="Spring">
       <programCourses
           course="//@course.21"/>
       <programCourses
@@ -219,7 +237,8 @@
           course="//@course.25"/>
     </semesters>
     <semesters
-        position="8">
+        position="8"
+        Season="Spring">
       <programCourses
           course="//@course.28"/>
       <programCourses
@@ -233,9 +252,21 @@
           course="//@course.31"/>
     </semesters>
     <semesters
-        position="9"/>
+        position="9">
+      <programCourses
+          course="//@course.32"/>
+      <programCourses
+          course="//@course.33"/>
+      <programCourses
+          type="Elective"
+          course="//@course.34"/>
+    </semesters>
     <semesters
-        position="10"/>
+        position="10"
+        Season="Spring">
+      <programCourses
+          course="//@course.35"/>
+    </semesters>
     <specialisations
         name="Programvaresystemer"
         semesters="//@programmes.0/@semesters.4 //@programmes.0/@semesters.5">
@@ -245,7 +276,7 @@
           name="Interaksjonsdesign "/>
       <mainProfiles
           name="Programvareutvikling"
-          semesters="//@programmes.0/@semesters.6 //@programmes.0/@semesters.7 //@programmes.0/@semesters.8 //@programmes.0/@semesters.9"/>
+          semesters="//@programmes.0/@semesters.6 //@programmes.0/@semesters.7"/>
     </specialisations>
   </programmes>
 </no.tdt4250.assignment.studyProgramme:Department>

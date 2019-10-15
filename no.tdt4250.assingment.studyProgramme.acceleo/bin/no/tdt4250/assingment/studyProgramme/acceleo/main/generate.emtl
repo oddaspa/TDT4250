@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="generate" nsURI="no::tdt4250::assingment::studyProgramme::acceleo::main::generate" startHeaderPosition="83" endHeaderPosition="286">
+    <documentation xsi:type="mtl:ModuleDocumentation">
+      <body startPosition="32" endPosition="80" value="&#xD;&#xA;The documentation of the module generate.&#xD;&#xA;&#xD;&#xA;"/>
+    </documentation>
+    <input>
+      <takesTypesFrom href="http://no/tdt4250/assignment/studyProgramme#/"/>
+    </input>
+    <input>
+      <takesTypesFrom href="http://www.eclipse.org/emf/2002/Ecore#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateHtml" visibility="Public" main="true">
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;html>&#xA;&lt;head>&#xA;&lt;meta charset=&quot;utf-8&quot;/>&#xA;&lt;title>"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="department" referredVariable="/0/generateHtml/department">
+            <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Department"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://no/tdt4250/assignment/studyProgramme#//Department/code"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" Courses&lt;/title>&#xA;&lt;style>&#xA;div { padding: 16px; }&#xA;&lt;/style>&#xA;&lt;/head>&#xA;&#xA;&lt;body>&#xA;&#xA;&lt;h1> "/>
+        <body xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/9/Sequence(String)">
+          <source xsi:type="ocl.ecore:PropertyCallExp" eType="/9/OrderedSet(Programme)">
+            <source xsi:type="ocl.ecore:VariableExp" name="department" referredVariable="/0/generateHtml/department">
+              <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Department"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://no/tdt4250/assignment/studyProgramme#//Department/programmes"/>
+          </source>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/generateHtml/%/collect/temp1">
+              <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Programme"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://no/tdt4250/assignment/studyProgramme#//Programme/name"/>
+          </body>
+          <iterator xsi:type="ocl.ecore:Variable" name="temp1">
+            <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Programme"/>
+          </iterator>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &lt;/h1>&#xA;&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;"/>
+          <body xsi:type="mtl:TemplateInvocation" definition="/0/generateBoard">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="programme" referredVariable="/0/generateHtml/%/%.4/programme">
+              <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Programme"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;&lt;hline/>&lt;br/>&#xA;"/>
+          <loopVariable name="programme">
+            <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Programme"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/9/OrderedSet(Programme)">
+            <source xsi:type="ocl.ecore:VariableExp" name="department" referredVariable="/0/generateHtml/department">
+              <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Department"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://no/tdt4250/assignment/studyProgramme#//Department/programmes"/>
+          </iterSet>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&lt;/body>&#xA;&lt;/html>&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="department" referredVariable="/0/generateHtml/department">
+              <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Department"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://no/tdt4250/assignment/studyProgramme#//Department/name"/>
+          </source>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".html">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <documentation xsi:type="mtl:ModuleElementDocumentation">
+        <body startPosition="210" endPosition="286" value="&#xD;&#xA;The documentation of the template generateElement.&#xD;&#xA;@param anEClass&#xD;&#xA;&#xD;&#xA;"/>
+        <parametersDocumentation name="anEClass">
+          <body value=""/>
+        </parametersDocumentation>
+      </documentation>
+      <parameter name="department">
+        <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Department"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateBoard" visibility="Public">
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&lt;div class=&quot;semester--block&quot;>&#xA;"/>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&lt;h2>"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="semester" referredVariable="/0/generateBoard/%/semester">
+              <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Semester"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://no/tdt4250/assignment/studyProgramme#//Semester/position"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=". year&lt;/h2>&#xA;&#x9;&#x9;&#x9;&lt;hr>&#xA;"/>
+          <body xsi:type="mtl:IfBlock">
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&lt;h2>"/>
+            <body xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/9/Sequence(String)">
+              <source xsi:type="ocl.ecore:PropertyCallExp" eType="/9/OrderedSet(Specialisation)">
+                <source xsi:type="ocl.ecore:VariableExp" name="programme" referredVariable="/0/generateBoard/programme">
+                  <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Programme"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://no/tdt4250/assignment/studyProgramme#//Programme/specialisations"/>
+              </source>
+              <body xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/generateBoard/%/%.1/%.3/collect/temp2">
+                  <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Specialisation"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://no/tdt4250/assignment/studyProgramme#//Specialisation/name"/>
+              </body>
+              <iterator xsi:type="ocl.ecore:Variable" name="temp2">
+                <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Specialisation"/>
+              </iterator>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/h2>&#xA;&#x9;&#x9;&#x9;&#x9;&lt;hr>&#xA;"/>
+            <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+              <source xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="semester" referredVariable="/0/generateBoard/%/semester">
+                  <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Semester"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://no/tdt4250/assignment/studyProgramme#//Semester/position"/>
+              </source>
+              <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="5">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/="/>
+            </ifExpr>
+          </body>
+          <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_OclAny_Class/toString">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ecore:EEnum" href="http://no/tdt4250/assignment/studyProgramme#//Season"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="semester" referredVariable="/0/generateBoard/%/semester">
+                  <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Semester"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://no/tdt4250/assignment/studyProgramme#//Semester/Season"/>
+              </source>
+            </source>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Fall">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/="/>
+          </ifExpr>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#xA;&#x9;&#x9;&lt;h2>"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EEnum" href="http://no/tdt4250/assignment/studyProgramme#//Season"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="semester" referredVariable="/0/generateBoard/%/semester">
+            <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Semester"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://no/tdt4250/assignment/studyProgramme#//Semester/Season"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="    "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="semester" referredVariable="/0/generateBoard/%/semester">
+            <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Semester"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://no/tdt4250/assignment/studyProgramme#//Semester/position"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=". year&lt;/h2>&#xA;&#x9;&#x9;&lt;table class=&quot;studyInstance&quot;>&#xA;&#x9;&#x9;&#x9;&lt;tr>&#xA;    &#x9;&#x9;&#x9;&lt;th>Emnekode&lt;/th>&#xA;    &#x9;&#x9;&#x9;&lt;th>Emnenavn&lt;/th>&#xA;    &#x9;&#x9;&#x9;&lt;th>SP&lt;/th>&#xA;&#x9;&#x9;&#x9;&#x9;&lt;th>Status&lt;/th>&#xA;  &#x9;&#x9;&#x9;&lt;/tr>&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&#x9;&lt;td>"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Course"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="programmeCourse" referredVariable="/0/generateBoard/%/%.7/programmeCourse">
+                <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse/course"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://no/tdt4250/assignment/studyProgramme#//Course/code"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &lt;/td>&#xA;&#x9;&#x9;&#x9;&#x9;&lt;td>"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Course"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="programmeCourse" referredVariable="/0/generateBoard/%/%.7/programmeCourse">
+                <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse/course"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://no/tdt4250/assignment/studyProgramme#//Course/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &lt;/td>&#xA;&#x9;&#x9;&#x9;&#x9;&lt;td>"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Course"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="programmeCourse" referredVariable="/0/generateBoard/%/%.7/programmeCourse">
+                <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse/course"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://no/tdt4250/assignment/studyProgramme#//Course/credit"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/td>&#xA;&#x9;&#x9;&#x9;&#x9;&lt;td>"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EEnum" href="http://no/tdt4250/assignment/studyProgramme#//CourseStatus"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="programmeCourse" referredVariable="/0/generateBoard/%/%.7/programmeCourse">
+              <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse/type"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/td> &#xA;&#x9;&#x9;&#x9;&lt;/tr>&#xA;"/>
+          <loopVariable name="programmeCourse">
+            <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/9/OrderedSet(ProgrammeCourse)">
+            <source xsi:type="ocl.ecore:VariableExp" name="semester" referredVariable="/0/generateBoard/%/semester">
+              <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Semester"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://no/tdt4250/assignment/studyProgramme#//Semester/programCourses"/>
+          </iterSet>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&lt;/table>&#xA;&#x9;&lt;/div>&#xA;"/>
+        <loopVariable name="semester">
+          <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Semester"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/9/OrderedSet(Semester)">
+          <source xsi:type="ocl.ecore:VariableExp" name="programme" referredVariable="/0/generateBoard/programme">
+            <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Programme"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://no/tdt4250/assignment/studyProgramme#//Programme/semesters"/>
+        </iterSet>
+      </body>
+      <parameter name="programme">
+        <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Programme"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="generateHtml">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateHtml"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="department">
+          <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Department"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateBoard">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateBoard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="programme">
+          <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Programme"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+      <eOperations name="toString">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="structure_Department_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://no/tdt4250/assignment/studyProgramme#//Department"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="structure_Programme_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://no/tdt4250/assignment/studyProgramme#//Programme"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Department"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Department"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Department"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Department"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Department"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Programme)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Programme"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(String)" instanceClassName="java.util.List">
+      <elementType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Semester)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Semester"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Specialisation)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Specialisation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(ProgrammeCourse)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Department"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Department"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Programme"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Programme"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Department"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Programme"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Programme"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Programme"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Semester"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Semester"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Semester"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Semester"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Semester"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Semester"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Semester"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Semester"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Semester"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Programme"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/%">
+      <details key="start" value="29"/>
+      <details key="end" value="82"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateHtml">
+      <details key="start" value="289"/>
+      <details key="end" value="741"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateHtml/%">
+      <details key="start" value="363"/>
+      <details key="end" value="729"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateHtml/%/%">
+      <details key="start" value="420"/>
+      <details key="end" value="465"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateHtml/%/%.1">
+      <details key="start" value="466"/>
+      <details key="end" value="481"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateHtml/%/%.1/department">
+      <details key="start" value="466"/>
+      <details key="end" value="476"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateHtml/%/%.2">
+      <details key="start" value="483"/>
+      <details key="end" value="562"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateHtml/%/collect">
+      <details key="start" value="563"/>
+      <details key="end" value="589"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateHtml/%/collect/%">
+      <details key="start" value="563"/>
+      <details key="end" value="584"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateHtml/%/collect/%/department">
+      <details key="start" value="563"/>
+      <details key="end" value="573"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateHtml/%/collect/%.1">
+      <details key="start" value="585"/>
+      <details key="end" value="589"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateHtml/%/collect/%.1/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateHtml/%/collect/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateHtml/%/%.3">
+      <details key="start" value="591"/>
+      <details key="end" value="599"/>
+      <details key="line" value="26"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateHtml/%/%.4">
+      <details key="start" value="599"/>
+      <details key="end" value="703"/>
+      <details key="line" value="28"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateHtml/%/%.4/%">
+      <details key="start" value="653"/>
+      <details key="end" value="654"/>
+      <details key="line" value="29"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateHtml/%/%.4/%.1">
+      <details key="start" value="655"/>
+      <details key="end" value="679"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateHtml/%/%.4/%.1/programme">
+      <details key="start" value="669"/>
+      <details key="end" value="678"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateHtml/%/%.4/%.2">
+      <details key="start" value="681"/>
+      <details key="end" value="697"/>
+      <details key="line" value="30"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateHtml/%/%.4/programme">
+      <details key="start" value="605"/>
+      <details key="end" value="626"/>
+      <details key="line" value="28"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generateHtml/%/%.4/%.3">
+      <details key="start" value="629"/>
+      <details key="end" value="650"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/generateHtml/%/%.4/%.3/department">
+      <details key="start" value="629"/>
+      <details key="end" value="639"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generateHtml/%/%.5">
+      <details key="start" value="704"/>
+      <details key="end" value="721"/>
+      <details key="line" value="32"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/generateHtml/%/%.6">
+      <details key="start" value="370"/>
+      <details key="end" value="401"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/generateHtml/%/%.6/%">
+      <details key="start" value="370"/>
+      <details key="end" value="385"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generateHtml/%/%.6/%/department">
+      <details key="start" value="370"/>
+      <details key="end" value="380"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/generateHtml/%/%.6/%.1">
+      <details key="start" value="393"/>
+      <details key="end" value="400"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generateHtml/%/%.7">
+      <details key="start" value="410"/>
+      <details key="end" value="417"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generateHtml/%.1">
+      <details key="start" value="207"/>
+      <details key="end" value="288"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generateHtml/%.1/anEClass">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/generateHtml/department">
+      <details key="start" value="319"/>
+      <details key="end" value="342"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/generateBoard">
+      <details key="start" value="743"/>
+      <details key="end" value="1587"/>
+      <details key="line" value="38"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generateBoard/%">
+      <details key="start" value="798"/>
+      <details key="end" value="1575"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generateBoard/%/%">
+      <details key="start" value="847"/>
+      <details key="end" value="878"/>
+      <details key="line" value="40"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/generateBoard/%/%.1">
+      <details key="start" value="880"/>
+      <details key="end" value="1070"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/generateBoard/%/%.1/%">
+      <details key="start" value="921"/>
+      <details key="end" value="928"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/generateBoard/%/%.1/%.1">
+      <details key="start" value="929"/>
+      <details key="end" value="946"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/generateBoard/%/%.1/%.1/semester">
+      <details key="start" value="929"/>
+      <details key="end" value="937"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/generateBoard/%/%.1/%.2">
+      <details key="start" value="948"/>
+      <details key="end" value="968"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/generateBoard/%/%.1/%.3">
+      <details key="start" value="971"/>
+      <details key="end" value="1062"/>
+      <details key="line" value="44"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/generateBoard/%/%.1/%.3/%">
+      <details key="start" value="998"/>
+      <details key="end" value="1006"/>
+      <details key="line" value="45"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/generateBoard/%/%.1/%.3/collect">
+      <details key="start" value="1007"/>
+      <details key="end" value="1037"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/generateBoard/%/%.1/%.3/collect/%">
+      <details key="start" value="1007"/>
+      <details key="end" value="1032"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/generateBoard/%/%.1/%.3/collect/%/programme">
+      <details key="start" value="1007"/>
+      <details key="end" value="1016"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/generateBoard/%/%.1/%.3/collect/%.1">
+      <details key="start" value="1033"/>
+      <details key="end" value="1037"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/generateBoard/%/%.1/%.3/collect/%.1/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/generateBoard/%/%.1/%.3/collect/temp2">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/generateBoard/%/%.1/%.3/%.1">
+      <details key="start" value="1039"/>
+      <details key="end" value="1054"/>
+      <details key="line" value="45"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/generateBoard/%/%.1/%.3/%.2">
+      <details key="start" value="975"/>
+      <details key="end" value="996"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/generateBoard/%/%.1/%.3/%.2/%">
+      <details key="start" value="976"/>
+      <details key="end" value="993"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/generateBoard/%/%.1/%.3/%.2/%/semester">
+      <details key="start" value="976"/>
+      <details key="end" value="984"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/generateBoard/%/%.1/%.3/%.2/%.1">
+      <details key="start" value="994"/>
+      <details key="end" value="995"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/generateBoard/%/%.1/%.4">
+      <details key="start" value="884"/>
+      <details key="end" value="919"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/generateBoard/%/%.1/%.4/%">
+      <details key="start" value="885"/>
+      <details key="end" value="911"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/generateBoard/%/%.1/%.4/%/%">
+      <details key="start" value="885"/>
+      <details key="end" value="900"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/generateBoard/%/%.1/%.4/%/%/semester">
+      <details key="start" value="885"/>
+      <details key="end" value="893"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/generateBoard/%/%.1/%.4/%.1">
+      <details key="start" value="912"/>
+      <details key="end" value="918"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/generateBoard/%/%.2">
+      <details key="start" value="1071"/>
+      <details key="end" value="1080"/>
+      <details key="line" value="49"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/generateBoard/%/%.3">
+      <details key="start" value="1081"/>
+      <details key="end" value="1096"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/generateBoard/%/%.3/semester">
+      <details key="start" value="1081"/>
+      <details key="end" value="1089"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/generateBoard/%/%.4">
+      <details key="start" value="1098"/>
+      <details key="end" value="1102"/>
+      <details key="line" value="50"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/generateBoard/%/%.5">
+      <details key="start" value="1103"/>
+      <details key="end" value="1120"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/generateBoard/%/%.5/semester">
+      <details key="start" value="1103"/>
+      <details key="end" value="1111"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/generateBoard/%/%.6">
+      <details key="start" value="1122"/>
+      <details key="end" value="1274"/>
+      <details key="line" value="50"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/generateBoard/%/%.7">
+      <details key="start" value="1277"/>
+      <details key="end" value="1548"/>
+      <details key="line" value="58"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/generateBoard/%/%.7/%">
+      <details key="start" value="1344"/>
+      <details key="end" value="1360"/>
+      <details key="line" value="59"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/generateBoard/%/%.7/%.1">
+      <details key="start" value="1361"/>
+      <details key="end" value="1388"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/generateBoard/%/%.7/%.1/%">
+      <details key="start" value="1361"/>
+      <details key="end" value="1383"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/generateBoard/%/%.7/%.1/%/programmeCourse">
+      <details key="start" value="1361"/>
+      <details key="end" value="1376"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/generateBoard/%/%.7/%.2">
+      <details key="start" value="1391"/>
+      <details key="end" value="1406"/>
+      <details key="line" value="60"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/generateBoard/%/%.7/%.3">
+      <details key="start" value="1407"/>
+      <details key="end" value="1434"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/generateBoard/%/%.7/%.3/%">
+      <details key="start" value="1407"/>
+      <details key="end" value="1429"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/generateBoard/%/%.7/%.3/%/programmeCourse">
+      <details key="start" value="1407"/>
+      <details key="end" value="1422"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.73" references="/0/generateBoard/%/%.7/%.4">
+      <details key="start" value="1437"/>
+      <details key="end" value="1452"/>
+      <details key="line" value="61"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/generateBoard/%/%.7/%.5">
+      <details key="start" value="1453"/>
+      <details key="end" value="1482"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.75" references="/0/generateBoard/%/%.7/%.5/%">
+      <details key="start" value="1453"/>
+      <details key="end" value="1475"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.76" references="/0/generateBoard/%/%.7/%.5/%/programmeCourse">
+      <details key="start" value="1453"/>
+      <details key="end" value="1468"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.77" references="/0/generateBoard/%/%.7/%.6">
+      <details key="start" value="1485"/>
+      <details key="end" value="1499"/>
+      <details key="line" value="62"/>
+    </eAnnotations>
+    <eAnnotations source="positions.78" references="/0/generateBoard/%/%.7/%.7">
+      <details key="start" value="1500"/>
+      <details key="end" value="1520"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.79" references="/0/generateBoard/%/%.7/%.7/programmeCourse">
+      <details key="start" value="1500"/>
+      <details key="end" value="1515"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.80" references="/0/generateBoard/%/%.7/%.8">
+      <details key="start" value="1523"/>
+      <details key="end" value="1539"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.81" references="/0/generateBoard/%/%.7/programmeCourse">
+      <details key="start" value="1283"/>
+      <details key="end" value="1315"/>
+      <details key="line" value="58"/>
+    </eAnnotations>
+    <eAnnotations source="positions.82" references="/0/generateBoard/%/%.7/%.9">
+      <details key="start" value="1318"/>
+      <details key="end" value="1341"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.83" references="/0/generateBoard/%/%.7/%.9/semester">
+      <details key="start" value="1318"/>
+      <details key="end" value="1326"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.84" references="/0/generateBoard/%/%.8">
+      <details key="start" value="1549"/>
+      <details key="end" value="1568"/>
+      <details key="line" value="66"/>
+    </eAnnotations>
+    <eAnnotations source="positions.85" references="/0/generateBoard/%/semester">
+      <details key="start" value="803"/>
+      <details key="end" value="822"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.86" references="/0/generateBoard/%/%.9">
+      <details key="start" value="825"/>
+      <details key="end" value="844"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.87" references="/0/generateBoard/%/%.9/programme">
+      <details key="start" value="825"/>
+      <details key="end" value="834"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.88" references="/0/generateBoard/programme">
+      <details key="start" value="774"/>
+      <details key="end" value="794"/>
+      <details key="line" value="38"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>
