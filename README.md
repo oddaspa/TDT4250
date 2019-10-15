@@ -44,8 +44,8 @@ EReferences
 Constraints
 - [x] Total credits in a semester
 - [x] Name convention on code and name
-- [ ] Number of semesters in a programme
-- [ ] Number of courses in a semester
+- [x] Number of semesters in a programme
+- [x] Number of courses in a semester
 - [ ] Courses allowed in a programme
 - [ ] Courses allowed in a specialization
 - [ ] Link between courses and programmeCourses
@@ -82,3 +82,17 @@ The Ecore model now supports the following EClasses:
 
 No constraints yet. As you see in the UML there are some containment relationships. These are visable in the following screenshot:  <br />
 ![alt text](https://github.com/oddaspa/TDT4250/blob/master/img/ecore_v1.png "Ecore first iteration")
+
+<a name="ass_1_update"></a>
+### 1.3 Assignment 1 Update 06.09.19
+
+* Removed relationship between Programme Eclass and ProgrammeCourses Eclass.
+* Instantiated sample xmi.
+* Wrote custom code for checking Course Eclass code attribute under codeLength.
+* Wrote OCL constraint named totalCreditValidation for semester Eclass.
+
+
+![alt text](https://github.com/oddaspa/TDT4250/blob/master/img/uml_v2.png "Plant UML second iteration") <br />
+
+
+![alt text](https://github.com/oddaspa/TDT4250/blob/master/img/ecore_v2.png "Ecore second iteration")
