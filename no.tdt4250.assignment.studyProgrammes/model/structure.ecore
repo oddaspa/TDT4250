@@ -45,6 +45,7 @@
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Season" lowerBound="1"
         eType="#//Season"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="year" eType="#//Year"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Specialisation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -70,5 +71,12 @@
   <eClassifiers xsi:type="ecore:EEnum" name="CourseStatus">
     <eLiterals name="Mandatory"/>
     <eLiterals name="Elective" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Year">
+    <eLiterals name="1" value="1"/>
+    <eLiterals name="2" value="2"/>
+    <eLiterals name="3" value="3"/>
+    <eLiterals name="4" value="4"/>
+    <eLiterals name="5" value="5"/>
   </eClassifiers>
 </ecore:EPackage>

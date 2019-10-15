@@ -11,13 +11,26 @@
  */]
 [template public generateHtml(department : Department)]
 [comment @main /]
-[file (department.name.concat('.html'), false, 'UTF-8')]
+[file (department.code.concat('.html'), false, 'UTF-8')]
 <html>
 <head>
 <meta charset="utf-8"/>
 <title>[department.code/] Courses</title>
 <style>
 div { padding: 16px; }
+
+th {
+  height: 50px;
+  text-allign: left;
+}
+
+table, th {
+  border: 1px solid black;
+}
+
+tr:nth-child(even) {background: #333}
+
+
 </style>
 </head>
 
@@ -39,15 +52,23 @@ div { padding: 16px; }
 	[for(semester : Semester | programme.semesters)]
 	<div class="semester--block">
 		[if (semester.Season.toString()='Fall')]
-			<h2>[semester.position/]. year</h2>
+			<h2>[semester.year/]. year</h2>
 			<hr>
 			[if (semester.position=5)]
 				<h2>[programme.specialisations.name/]</h2>
 				<hr>
 			[/if]
+			[if (semester.position=7)]
+				[for(mainProfile : Main Profile | programme.specialisations.mainProfiles)]
+					[if(mainProfile.semesters -> notEmpty())]
+						<h2>[mainProfile.name/]</h2>
+						<hr>
+					[/if]
+				[/for]
+			[/if]
 		[/if]
 		
-		<h2>[semester.Season/]    [semester.position/]. year</h2>
+		<h2>[semester.Season/]</h2>
 		<table class="studyInstance">
 			<tr>
     			<th>Emnekode</th>

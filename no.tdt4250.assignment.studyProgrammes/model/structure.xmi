@@ -177,7 +177,8 @@
           course="//@course.7"/>
     </semesters>
     <semesters
-        position="3">
+        position="3"
+        year="2">
       <programCourses
           course="//@course.8"/>
       <programCourses
@@ -189,7 +190,8 @@
     </semesters>
     <semesters
         position="4"
-        Season="Spring">
+        Season="Spring"
+        year="2">
       <programCourses
           course="//@course.12"/>
       <programCourses
@@ -200,7 +202,8 @@
           course="//@course.15"/>
     </semesters>
     <semesters
-        position="5">
+        position="5"
+        year="3">
       <programCourses
           course="//@course.16"/>
       <programCourses
@@ -216,7 +219,8 @@
     </semesters>
     <semesters
         position="6"
-        Season="Spring">
+        Season="Spring"
+        year="3">
       <programCourses
           course="//@course.21"/>
       <programCourses
@@ -227,7 +231,8 @@
           course="//@course.24"/>
     </semesters>
     <semesters
-        position="7">
+        position="7"
+        year="4">
       <programCourses
           course="//@course.27"/>
       <programCourses
@@ -238,7 +243,8 @@
     </semesters>
     <semesters
         position="8"
-        Season="Spring">
+        Season="Spring"
+        year="4">
       <programCourses
           course="//@course.28"/>
       <programCourses
@@ -252,7 +258,8 @@
           course="//@course.31"/>
     </semesters>
     <semesters
-        position="9">
+        position="9"
+        year="5">
       <programCourses
           course="//@course.32"/>
       <programCourses
@@ -263,7 +270,8 @@
     </semesters>
     <semesters
         position="10"
-        Season="Spring">
+        Season="Spring"
+        year="5">
       <programCourses
           course="//@course.35"/>
     </semesters>
