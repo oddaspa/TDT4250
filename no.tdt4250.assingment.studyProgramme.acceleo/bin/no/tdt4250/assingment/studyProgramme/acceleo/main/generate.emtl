@@ -18,9 +18,9 @@
           <source xsi:type="ocl.ecore:VariableExp" name="department" referredVariable="/0/generateHtml/department">
             <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Department"/>
           </source>
-          <referredProperty xsi:type="ecore:EAttribute" href="http://no/tdt4250/assignment/studyProgramme#//Department/code"/>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://no/tdt4250/assignment/studyProgramme#//Department/name"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" Courses&lt;/title>&#xA;&lt;style>&#xA;div { padding: 16px; }&#xA;&#xA;th {&#xA;  height: 50px;&#xA;  text-allign: left;&#xA;}&#xA;&#xA;table, th {&#xA;  border: 1px solid black;&#xA;}&#xA;&#xA;tr:nth-child(even) {background: #333}&#xA;&#xA;&#xA;&lt;/style>&#xA;&lt;/head>&#xA;&#xA;&lt;body>&#xA;&#xA;&lt;h1> "/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" Courses&lt;/title>&#xA;&lt;style>&#xA;&#xA;body {&#xA;  font-family:&quot;open sans&quot;, arial, sans-serif;&#xA;  color: #333;&#xA;}&#xA;&#xA;h1 {&#xA;  font-size: 25px;&#xA;}&#xA;&#xA;div { &#xA;  padding: 14px; &#xA;}&#xA;&#xA;tr {&#xA;  text-align: left;&#xA;}&#xA;&#xA;table {&#xA;  width: 620px;&#xA;  border: 1px solid #F7F7F7;&#xA;  background-color: #F7f7f7;&#xA;}&#xA;&#xA;tr:nth-child(even) {background: #FAFAFA}&#xA;&#xA;h3 {&#xA;  font-size: 20px;&#xA;  color: #888;&#xA;  margin: 0px;&#xA;}&#xA;&#xA;h4 {&#xA;  font-size: 17px;&#xA;  color: #333;&#xA;  margin: 0px;&#xA;}&#xA;&#xA;.table-header {&#xA;  border: 1px solid #F7F7F7;&#xA;  background-color:#F7F7F7;&#xA;&#xA;}&#xA;&lt;/style>&#xA;&lt;/head>&#xA;&#xA;&lt;body>&#xA;&lt;h1>Studieplan&lt;/h1>&#xA;&lt;h2> "/>
         <body xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/9/Sequence(String)">
           <source xsi:type="ocl.ecore:PropertyCallExp" eType="/9/OrderedSet(Programme)">
             <source xsi:type="ocl.ecore:VariableExp" name="department" referredVariable="/0/generateHtml/department">
@@ -39,7 +39,7 @@
             <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Programme"/>
           </iterator>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &lt;/h1>&#xA;&#xA;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &lt;/h2>&#xA;&#xA;"/>
         <body xsi:type="mtl:ForBlock">
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;"/>
           <body xsi:type="mtl:TemplateInvocation" definition="/0/generateBoard">
@@ -214,7 +214,7 @@
             <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/="/>
           </ifExpr>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#xA;&#x9;&#x9;&lt;h2>"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&lt;br>&#xA;&#x9;&#x9;&lt;h3>"/>
         <body xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ecore:EEnum" href="http://no/tdt4250/assignment/studyProgramme#//Season"/>
           <source xsi:type="ocl.ecore:VariableExp" name="semester" referredVariable="/0/generateBoard/%/semester">
@@ -222,26 +222,58 @@
           </source>
           <referredProperty xsi:type="ecore:EAttribute" href="http://no/tdt4250/assignment/studyProgramme#//Semester/Season"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/h2>&#xA;&#x9;&#x9;&lt;table class=&quot;studyInstance&quot;>&#xA;&#x9;&#x9;&#x9;&lt;tr>&#xA;    &#x9;&#x9;&#x9;&lt;th>Emnekode&lt;/th>&#xA;    &#x9;&#x9;&#x9;&lt;th>Emnenavn&lt;/th>&#xA;    &#x9;&#x9;&#x9;&lt;th>SP&lt;/th>&#xA;&#x9;&#x9;&#x9;&#x9;&lt;th>Status&lt;/th>&#xA;  &#x9;&#x9;&#x9;&lt;/tr>&#xA;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/h3>&#xA;&#x9;&#x9;&lt;h4>"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EEnum" href="http://no/tdt4250/assignment/studyProgramme#//Year"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="semester" referredVariable="/0/generateBoard/%/semester">
+            <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Semester"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://no/tdt4250/assignment/studyProgramme#//Semester/year"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=". year "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="programme" referredVariable="/0/generateBoard/programme">
+            <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Programme"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://no/tdt4250/assignment/studyProgramme#//Programme/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" - 5-years&lt;/h4>&#xA;&#x9;&#x9;&lt;table>&#xA;&#x9;&#x9;&#x9;&lt;tr class=&quot;table-header&quot;>&#xA;    &#x9;&#x9;&#x9;&lt;th>Emnekode&lt;/th>&#xA;    &#x9;&#x9;&#x9;&lt;th>Emnenavn&lt;/th>&#xA;    &#x9;&#x9;&#x9;&lt;th>SP&lt;/th>&#xA;&#x9;&#x9;&#x9;&#x9;&lt;th>Status&lt;/th>&#xA;  &#x9;&#x9;&#x9;&lt;/tr>&#xA;"/>
         <body xsi:type="mtl:ForBlock">
-          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&#x9;&lt;td>"/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&#x9;&lt;td class=&quot;emnekode&quot;>&lt;a href=&quot;http://www.ntnu.no/studier/emner/"/>
+          <body xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Course"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="programmeCourse" referredVariable="/0/generateBoard/%/%.9/programmeCourse">
+                  <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse/course"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://no/tdt4250/assignment/studyProgramme#//Course/code"/>
+            </source>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toString"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;>"/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
             <source xsi:type="ocl.ecore:PropertyCallExp">
               <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Course"/>
-              <source xsi:type="ocl.ecore:VariableExp" name="programmeCourse" referredVariable="/0/generateBoard/%/%.5/programmeCourse">
+              <source xsi:type="ocl.ecore:VariableExp" name="programmeCourse" referredVariable="/0/generateBoard/%/%.9/programmeCourse">
                 <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse"/>
               </source>
               <referredProperty xsi:type="ecore:EReference" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse/course"/>
             </source>
             <referredProperty xsi:type="ecore:EAttribute" href="http://no/tdt4250/assignment/studyProgramme#//Course/code"/>
           </body>
-          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &lt;/td>&#xA;&#x9;&#x9;&#x9;&#x9;&lt;td>"/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/a> &lt;/td>&#xA;&#x9;&#x9;&#x9;&#x9;&lt;td>"/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
             <source xsi:type="ocl.ecore:PropertyCallExp">
               <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Course"/>
-              <source xsi:type="ocl.ecore:VariableExp" name="programmeCourse" referredVariable="/0/generateBoard/%/%.5/programmeCourse">
+              <source xsi:type="ocl.ecore:VariableExp" name="programmeCourse" referredVariable="/0/generateBoard/%/%.9/programmeCourse">
                 <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse"/>
               </source>
               <referredProperty xsi:type="ecore:EReference" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse/course"/>
@@ -253,7 +285,7 @@
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
             <source xsi:type="ocl.ecore:PropertyCallExp">
               <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Course"/>
-              <source xsi:type="ocl.ecore:VariableExp" name="programmeCourse" referredVariable="/0/generateBoard/%/%.5/programmeCourse">
+              <source xsi:type="ocl.ecore:VariableExp" name="programmeCourse" referredVariable="/0/generateBoard/%/%.9/programmeCourse">
                 <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse"/>
               </source>
               <referredProperty xsi:type="ecore:EReference" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse/course"/>
@@ -263,7 +295,7 @@
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/td>&#xA;&#x9;&#x9;&#x9;&#x9;&lt;td>"/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ecore:EEnum" href="http://no/tdt4250/assignment/studyProgramme#//CourseStatus"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="programmeCourse" referredVariable="/0/generateBoard/%/%.5/programmeCourse">
+            <source xsi:type="ocl.ecore:VariableExp" name="programmeCourse" referredVariable="/0/generateBoard/%/%.9/programmeCourse">
               <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse"/>
             </source>
             <referredProperty xsi:type="ecore:EAttribute" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse/type"/>
@@ -494,6 +526,15 @@
     <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Semester"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Semester"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//Semester"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://no/tdt4250/assignment/studyProgramme#//ProgrammeCourse"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
@@ -531,12 +572,12 @@
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/generateHtml">
       <details key="start" value="289"/>
-      <details key="end" value="869"/>
+      <details key="end" value="1209"/>
       <details key="line" value="12"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/generateHtml/%">
       <details key="start" value="363"/>
-      <details key="end" value="857"/>
+      <details key="end" value="1197"/>
       <details key="line" value="14"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/generateHtml/%/%">
@@ -556,27 +597,27 @@
     </eAnnotations>
     <eAnnotations source="positions.6" references="/0/generateHtml/%/%.2">
       <details key="start" value="483"/>
-      <details key="end" value="690"/>
+      <details key="end" value="1030"/>
       <details key="line" value="18"/>
     </eAnnotations>
     <eAnnotations source="positions.7" references="/0/generateHtml/%/collect">
-      <details key="start" value="691"/>
-      <details key="end" value="717"/>
+      <details key="start" value="1031"/>
+      <details key="end" value="1057"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.8" references="/0/generateHtml/%/collect/%">
-      <details key="start" value="691"/>
-      <details key="end" value="712"/>
+      <details key="start" value="1031"/>
+      <details key="end" value="1052"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.9" references="/0/generateHtml/%/collect/%/department">
-      <details key="start" value="691"/>
-      <details key="end" value="701"/>
+      <details key="start" value="1031"/>
+      <details key="end" value="1041"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.10" references="/0/generateHtml/%/collect/%.1">
-      <details key="start" value="713"/>
-      <details key="end" value="717"/>
+      <details key="start" value="1053"/>
+      <details key="end" value="1057"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.11" references="/0/generateHtml/%/collect/%.1/temp1">
@@ -590,54 +631,54 @@
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.13" references="/0/generateHtml/%/%.3">
-      <details key="start" value="719"/>
-      <details key="end" value="727"/>
-      <details key="line" value="39"/>
+      <details key="start" value="1059"/>
+      <details key="end" value="1067"/>
+      <details key="line" value="68"/>
     </eAnnotations>
     <eAnnotations source="positions.14" references="/0/generateHtml/%/%.4">
-      <details key="start" value="727"/>
-      <details key="end" value="831"/>
-      <details key="line" value="41"/>
+      <details key="start" value="1067"/>
+      <details key="end" value="1171"/>
+      <details key="line" value="70"/>
     </eAnnotations>
     <eAnnotations source="positions.15" references="/0/generateHtml/%/%.4/%">
-      <details key="start" value="781"/>
-      <details key="end" value="782"/>
-      <details key="line" value="42"/>
+      <details key="start" value="1121"/>
+      <details key="end" value="1122"/>
+      <details key="line" value="71"/>
     </eAnnotations>
     <eAnnotations source="positions.16" references="/0/generateHtml/%/%.4/%.1">
-      <details key="start" value="783"/>
-      <details key="end" value="807"/>
+      <details key="start" value="1123"/>
+      <details key="end" value="1147"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.17" references="/0/generateHtml/%/%.4/%.1/programme">
-      <details key="start" value="797"/>
-      <details key="end" value="806"/>
+      <details key="start" value="1137"/>
+      <details key="end" value="1146"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.18" references="/0/generateHtml/%/%.4/%.2">
-      <details key="start" value="809"/>
-      <details key="end" value="825"/>
-      <details key="line" value="43"/>
+      <details key="start" value="1149"/>
+      <details key="end" value="1165"/>
+      <details key="line" value="72"/>
     </eAnnotations>
     <eAnnotations source="positions.19" references="/0/generateHtml/%/%.4/programme">
-      <details key="start" value="733"/>
-      <details key="end" value="754"/>
-      <details key="line" value="41"/>
+      <details key="start" value="1073"/>
+      <details key="end" value="1094"/>
+      <details key="line" value="70"/>
     </eAnnotations>
     <eAnnotations source="positions.20" references="/0/generateHtml/%/%.4/%.3">
-      <details key="start" value="757"/>
-      <details key="end" value="778"/>
+      <details key="start" value="1097"/>
+      <details key="end" value="1118"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.21" references="/0/generateHtml/%/%.4/%.3/department">
-      <details key="start" value="757"/>
-      <details key="end" value="767"/>
+      <details key="start" value="1097"/>
+      <details key="end" value="1107"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.22" references="/0/generateHtml/%/%.5">
-      <details key="start" value="832"/>
-      <details key="end" value="849"/>
-      <details key="line" value="45"/>
+      <details key="start" value="1172"/>
+      <details key="end" value="1189"/>
+      <details key="line" value="74"/>
     </eAnnotations>
     <eAnnotations source="positions.23" references="/0/generateHtml/%/%.6">
       <details key="start" value="370"/>
@@ -680,73 +721,73 @@
       <details key="line" value="12"/>
     </eAnnotations>
     <eAnnotations source="positions.31" references="/0/generateBoard">
-      <details key="start" value="871"/>
-      <details key="end" value="1914"/>
-      <details key="line" value="51"/>
+      <details key="start" value="1211"/>
+      <details key="end" value="2425"/>
+      <details key="line" value="80"/>
     </eAnnotations>
     <eAnnotations source="positions.32" references="/0/generateBoard/%">
-      <details key="start" value="926"/>
-      <details key="end" value="1902"/>
-      <details key="line" value="52"/>
+      <details key="start" value="1266"/>
+      <details key="end" value="2413"/>
+      <details key="line" value="81"/>
     </eAnnotations>
     <eAnnotations source="positions.33" references="/0/generateBoard/%/%">
-      <details key="start" value="975"/>
-      <details key="end" value="1006"/>
-      <details key="line" value="53"/>
+      <details key="start" value="1315"/>
+      <details key="end" value="1346"/>
+      <details key="line" value="82"/>
     </eAnnotations>
     <eAnnotations source="positions.34" references="/0/generateBoard/%/%.1">
-      <details key="start" value="1008"/>
-      <details key="end" value="1427"/>
-      <details key="line" value="54"/>
+      <details key="start" value="1348"/>
+      <details key="end" value="1767"/>
+      <details key="line" value="83"/>
     </eAnnotations>
     <eAnnotations source="positions.35" references="/0/generateBoard/%/%.1/%">
-      <details key="start" value="1049"/>
-      <details key="end" value="1056"/>
-      <details key="line" value="55"/>
+      <details key="start" value="1389"/>
+      <details key="end" value="1396"/>
+      <details key="line" value="84"/>
     </eAnnotations>
     <eAnnotations source="positions.36" references="/0/generateBoard/%/%.1/%.1">
-      <details key="start" value="1057"/>
-      <details key="end" value="1070"/>
+      <details key="start" value="1397"/>
+      <details key="end" value="1410"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.37" references="/0/generateBoard/%/%.1/%.1/semester">
-      <details key="start" value="1057"/>
-      <details key="end" value="1065"/>
+      <details key="start" value="1397"/>
+      <details key="end" value="1405"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.38" references="/0/generateBoard/%/%.1/%.2">
-      <details key="start" value="1072"/>
-      <details key="end" value="1092"/>
-      <details key="line" value="55"/>
+      <details key="start" value="1412"/>
+      <details key="end" value="1432"/>
+      <details key="line" value="84"/>
     </eAnnotations>
     <eAnnotations source="positions.39" references="/0/generateBoard/%/%.1/%.3">
-      <details key="start" value="1095"/>
-      <details key="end" value="1186"/>
-      <details key="line" value="57"/>
+      <details key="start" value="1435"/>
+      <details key="end" value="1526"/>
+      <details key="line" value="86"/>
     </eAnnotations>
     <eAnnotations source="positions.40" references="/0/generateBoard/%/%.1/%.3/%">
-      <details key="start" value="1122"/>
-      <details key="end" value="1130"/>
-      <details key="line" value="58"/>
+      <details key="start" value="1462"/>
+      <details key="end" value="1470"/>
+      <details key="line" value="87"/>
     </eAnnotations>
     <eAnnotations source="positions.41" references="/0/generateBoard/%/%.1/%.3/collect">
-      <details key="start" value="1131"/>
-      <details key="end" value="1161"/>
+      <details key="start" value="1471"/>
+      <details key="end" value="1501"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.42" references="/0/generateBoard/%/%.1/%.3/collect/%">
-      <details key="start" value="1131"/>
-      <details key="end" value="1156"/>
+      <details key="start" value="1471"/>
+      <details key="end" value="1496"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.43" references="/0/generateBoard/%/%.1/%.3/collect/%/programme">
-      <details key="start" value="1131"/>
-      <details key="end" value="1140"/>
+      <details key="start" value="1471"/>
+      <details key="end" value="1480"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.44" references="/0/generateBoard/%/%.1/%.3/collect/%.1">
-      <details key="start" value="1157"/>
-      <details key="end" value="1161"/>
+      <details key="start" value="1497"/>
+      <details key="end" value="1501"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.45" references="/0/generateBoard/%/%.1/%.3/collect/%.1/temp1">
@@ -760,103 +801,103 @@
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.47" references="/0/generateBoard/%/%.1/%.3/%.1">
-      <details key="start" value="1163"/>
-      <details key="end" value="1178"/>
-      <details key="line" value="58"/>
+      <details key="start" value="1503"/>
+      <details key="end" value="1518"/>
+      <details key="line" value="87"/>
     </eAnnotations>
     <eAnnotations source="positions.48" references="/0/generateBoard/%/%.1/%.3/%.2">
-      <details key="start" value="1099"/>
-      <details key="end" value="1120"/>
+      <details key="start" value="1439"/>
+      <details key="end" value="1460"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.49" references="/0/generateBoard/%/%.1/%.3/%.2/%">
-      <details key="start" value="1100"/>
-      <details key="end" value="1117"/>
+      <details key="start" value="1440"/>
+      <details key="end" value="1457"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.50" references="/0/generateBoard/%/%.1/%.3/%.2/%/semester">
-      <details key="start" value="1100"/>
-      <details key="end" value="1108"/>
+      <details key="start" value="1440"/>
+      <details key="end" value="1448"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.51" references="/0/generateBoard/%/%.1/%.3/%.2/%.1">
-      <details key="start" value="1118"/>
-      <details key="end" value="1119"/>
+      <details key="start" value="1458"/>
+      <details key="end" value="1459"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.52" references="/0/generateBoard/%/%.1/%.4">
-      <details key="start" value="1190"/>
-      <details key="end" value="1419"/>
-      <details key="line" value="61"/>
+      <details key="start" value="1530"/>
+      <details key="end" value="1759"/>
+      <details key="line" value="90"/>
     </eAnnotations>
     <eAnnotations source="positions.53" references="/0/generateBoard/%/%.1/%.4/%">
-      <details key="start" value="1221"/>
-      <details key="end" value="1410"/>
-      <details key="line" value="62"/>
+      <details key="start" value="1561"/>
+      <details key="end" value="1750"/>
+      <details key="line" value="91"/>
     </eAnnotations>
     <eAnnotations source="positions.54" references="/0/generateBoard/%/%.1/%.4/%/%">
-      <details key="start" value="1301"/>
-      <details key="end" value="1399"/>
-      <details key="line" value="63"/>
+      <details key="start" value="1641"/>
+      <details key="end" value="1739"/>
+      <details key="line" value="92"/>
     </eAnnotations>
     <eAnnotations source="positions.55" references="/0/generateBoard/%/%.1/%.4/%/%/%">
-      <details key="start" value="1343"/>
-      <details key="end" value="1353"/>
-      <details key="line" value="64"/>
+      <details key="start" value="1683"/>
+      <details key="end" value="1693"/>
+      <details key="line" value="93"/>
     </eAnnotations>
     <eAnnotations source="positions.56" references="/0/generateBoard/%/%.1/%.4/%/%/%.1">
-      <details key="start" value="1354"/>
-      <details key="end" value="1370"/>
+      <details key="start" value="1694"/>
+      <details key="end" value="1710"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.57" references="/0/generateBoard/%/%.1/%.4/%/%/%.1/mainProfile">
-      <details key="start" value="1354"/>
-      <details key="end" value="1365"/>
+      <details key="start" value="1694"/>
+      <details key="end" value="1705"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.58" references="/0/generateBoard/%/%.1/%.4/%/%/%.2">
-      <details key="start" value="1372"/>
-      <details key="end" value="1389"/>
-      <details key="line" value="64"/>
+      <details key="start" value="1712"/>
+      <details key="end" value="1729"/>
+      <details key="line" value="93"/>
     </eAnnotations>
     <eAnnotations source="positions.59" references="/0/generateBoard/%/%.1/%.4/%/%/%.3">
-      <details key="start" value="1304"/>
-      <details key="end" value="1341"/>
+      <details key="start" value="1644"/>
+      <details key="end" value="1681"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.60" references="/0/generateBoard/%/%.1/%.4/%/%/%.3/%">
-      <details key="start" value="1305"/>
-      <details key="end" value="1326"/>
+      <details key="start" value="1645"/>
+      <details key="end" value="1666"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.61" references="/0/generateBoard/%/%.1/%.4/%/%/%.3/%/mainProfile">
-      <details key="start" value="1305"/>
-      <details key="end" value="1316"/>
+      <details key="start" value="1645"/>
+      <details key="end" value="1656"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.62" references="/0/generateBoard/%/%.1/%.4/%/mainProfile">
-      <details key="start" value="1226"/>
-      <details key="end" value="1252"/>
-      <details key="line" value="62"/>
+      <details key="start" value="1566"/>
+      <details key="end" value="1592"/>
+      <details key="line" value="91"/>
     </eAnnotations>
     <eAnnotations source="positions.63" references="/0/generateBoard/%/%.1/%.4/%/collect">
-      <details key="start" value="1255"/>
-      <details key="end" value="1293"/>
+      <details key="start" value="1595"/>
+      <details key="end" value="1633"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.64" references="/0/generateBoard/%/%.1/%.4/%/collect/%">
-      <details key="start" value="1255"/>
-      <details key="end" value="1280"/>
+      <details key="start" value="1595"/>
+      <details key="end" value="1620"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.65" references="/0/generateBoard/%/%.1/%.4/%/collect/%/programme">
-      <details key="start" value="1255"/>
-      <details key="end" value="1264"/>
+      <details key="start" value="1595"/>
+      <details key="end" value="1604"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.66" references="/0/generateBoard/%/%.1/%.4/%/collect/%.1">
-      <details key="start" value="1281"/>
-      <details key="end" value="1293"/>
+      <details key="start" value="1621"/>
+      <details key="end" value="1633"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.67" references="/0/generateBoard/%/%.1/%.4/%/collect/%.1/temp1">
@@ -870,194 +911,249 @@
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.69" references="/0/generateBoard/%/%.1/%.4/%.1">
-      <details key="start" value="1194"/>
-      <details key="end" value="1215"/>
+      <details key="start" value="1534"/>
+      <details key="end" value="1555"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.70" references="/0/generateBoard/%/%.1/%.4/%.1/%">
-      <details key="start" value="1195"/>
-      <details key="end" value="1212"/>
+      <details key="start" value="1535"/>
+      <details key="end" value="1552"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.71" references="/0/generateBoard/%/%.1/%.4/%.1/%/semester">
-      <details key="start" value="1195"/>
-      <details key="end" value="1203"/>
+      <details key="start" value="1535"/>
+      <details key="end" value="1543"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.72" references="/0/generateBoard/%/%.1/%.4/%.1/%.1">
-      <details key="start" value="1213"/>
-      <details key="end" value="1214"/>
+      <details key="start" value="1553"/>
+      <details key="end" value="1554"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.73" references="/0/generateBoard/%/%.1/%.5">
-      <details key="start" value="1012"/>
-      <details key="end" value="1047"/>
+      <details key="start" value="1352"/>
+      <details key="end" value="1387"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.74" references="/0/generateBoard/%/%.1/%.5/%">
-      <details key="start" value="1013"/>
-      <details key="end" value="1039"/>
+      <details key="start" value="1353"/>
+      <details key="end" value="1379"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.75" references="/0/generateBoard/%/%.1/%.5/%/%">
-      <details key="start" value="1013"/>
-      <details key="end" value="1028"/>
+      <details key="start" value="1353"/>
+      <details key="end" value="1368"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.76" references="/0/generateBoard/%/%.1/%.5/%/%/semester">
-      <details key="start" value="1013"/>
-      <details key="end" value="1021"/>
+      <details key="start" value="1353"/>
+      <details key="end" value="1361"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.77" references="/0/generateBoard/%/%.1/%.5/%.1">
-      <details key="start" value="1040"/>
-      <details key="end" value="1046"/>
+      <details key="start" value="1380"/>
+      <details key="end" value="1386"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.78" references="/0/generateBoard/%/%.2">
-      <details key="start" value="1428"/>
-      <details key="end" value="1437"/>
-      <details key="line" value="70"/>
+      <details key="start" value="1768"/>
+      <details key="end" value="1781"/>
+      <details key="line" value="99"/>
     </eAnnotations>
     <eAnnotations source="positions.79" references="/0/generateBoard/%/%.3">
-      <details key="start" value="1438"/>
-      <details key="end" value="1453"/>
+      <details key="start" value="1782"/>
+      <details key="end" value="1797"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.80" references="/0/generateBoard/%/%.3/semester">
-      <details key="start" value="1438"/>
-      <details key="end" value="1446"/>
+      <details key="start" value="1782"/>
+      <details key="end" value="1790"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.81" references="/0/generateBoard/%/%.4">
-      <details key="start" value="1455"/>
-      <details key="end" value="1601"/>
-      <details key="line" value="71"/>
+      <details key="start" value="1799"/>
+      <details key="end" value="1811"/>
+      <details key="line" value="100"/>
     </eAnnotations>
     <eAnnotations source="positions.82" references="/0/generateBoard/%/%.5">
-      <details key="start" value="1604"/>
-      <details key="end" value="1875"/>
-      <details key="line" value="79"/>
-    </eAnnotations>
-    <eAnnotations source="positions.83" references="/0/generateBoard/%/%.5/%">
-      <details key="start" value="1671"/>
-      <details key="end" value="1687"/>
-      <details key="line" value="80"/>
-    </eAnnotations>
-    <eAnnotations source="positions.84" references="/0/generateBoard/%/%.5/%.1">
-      <details key="start" value="1688"/>
-      <details key="end" value="1715"/>
+      <details key="start" value="1812"/>
+      <details key="end" value="1825"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.85" references="/0/generateBoard/%/%.5/%.1/%">
-      <details key="start" value="1688"/>
-      <details key="end" value="1710"/>
+    <eAnnotations source="positions.83" references="/0/generateBoard/%/%.5/semester">
+      <details key="start" value="1812"/>
+      <details key="end" value="1820"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.86" references="/0/generateBoard/%/%.5/%.1/%/programmeCourse">
-      <details key="start" value="1688"/>
-      <details key="end" value="1703"/>
+    <eAnnotations source="positions.84" references="/0/generateBoard/%/%.6">
+      <details key="start" value="1827"/>
+      <details key="end" value="1834"/>
+      <details key="line" value="101"/>
+    </eAnnotations>
+    <eAnnotations source="positions.85" references="/0/generateBoard/%/%.7">
+      <details key="start" value="1835"/>
+      <details key="end" value="1849"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.87" references="/0/generateBoard/%/%.5/%.2">
-      <details key="start" value="1718"/>
-      <details key="end" value="1733"/>
+    <eAnnotations source="positions.86" references="/0/generateBoard/%/%.7/programme">
+      <details key="start" value="1835"/>
+      <details key="end" value="1844"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.87" references="/0/generateBoard/%/%.8">
+      <details key="start" value="1851"/>
+      <details key="end" value="2006"/>
+      <details key="line" value="101"/>
+    </eAnnotations>
+    <eAnnotations source="positions.88" references="/0/generateBoard/%/%.9">
+      <details key="start" value="2009"/>
+      <details key="end" value="2386"/>
+      <details key="line" value="109"/>
+    </eAnnotations>
+    <eAnnotations source="positions.89" references="/0/generateBoard/%/%.9/%">
+      <details key="start" value="2076"/>
+      <details key="end" value="2151"/>
+      <details key="line" value="110"/>
+    </eAnnotations>
+    <eAnnotations source="positions.90" references="/0/generateBoard/%/%.9/%.1">
+      <details key="start" value="2152"/>
+      <details key="end" value="2190"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.91" references="/0/generateBoard/%/%.9/%.1/%">
+      <details key="start" value="2152"/>
+      <details key="end" value="2179"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.92" references="/0/generateBoard/%/%.9/%.1/%/%">
+      <details key="start" value="2152"/>
+      <details key="end" value="2174"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.93" references="/0/generateBoard/%/%.9/%.1/%/%/programmeCourse">
+      <details key="start" value="2152"/>
+      <details key="end" value="2167"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.94" references="/0/generateBoard/%/%.9/%.2">
+      <details key="start" value="2192"/>
+      <details key="end" value="2194"/>
+      <details key="line" value="111"/>
+    </eAnnotations>
+    <eAnnotations source="positions.95" references="/0/generateBoard/%/%.9/%.3">
+      <details key="start" value="2195"/>
+      <details key="end" value="2222"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.96" references="/0/generateBoard/%/%.9/%.3/%">
+      <details key="start" value="2195"/>
+      <details key="end" value="2217"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.97" references="/0/generateBoard/%/%.9/%.3/%/programmeCourse">
+      <details key="start" value="2195"/>
+      <details key="end" value="2210"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.98" references="/0/generateBoard/%/%.9/%.4">
+      <details key="start" value="2225"/>
+      <details key="end" value="2244"/>
+      <details key="line" value="111"/>
+    </eAnnotations>
+    <eAnnotations source="positions.99" references="/0/generateBoard/%/%.9/%.5">
+      <details key="start" value="2245"/>
+      <details key="end" value="2272"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.100" references="/0/generateBoard/%/%.9/%.5/%">
+      <details key="start" value="2245"/>
+      <details key="end" value="2267"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.101" references="/0/generateBoard/%/%.9/%.5/%/programmeCourse">
+      <details key="start" value="2245"/>
+      <details key="end" value="2260"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.102" references="/0/generateBoard/%/%.9/%.6">
+      <details key="start" value="2275"/>
+      <details key="end" value="2290"/>
+      <details key="line" value="112"/>
+    </eAnnotations>
+    <eAnnotations source="positions.103" references="/0/generateBoard/%/%.9/%.7">
+      <details key="start" value="2291"/>
+      <details key="end" value="2320"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.104" references="/0/generateBoard/%/%.9/%.7/%">
+      <details key="start" value="2291"/>
+      <details key="end" value="2313"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.105" references="/0/generateBoard/%/%.9/%.7/%/programmeCourse">
+      <details key="start" value="2291"/>
+      <details key="end" value="2306"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.106" references="/0/generateBoard/%/%.9/%.8">
+      <details key="start" value="2323"/>
+      <details key="end" value="2337"/>
+      <details key="line" value="113"/>
+    </eAnnotations>
+    <eAnnotations source="positions.107" references="/0/generateBoard/%/%.9/%.9">
+      <details key="start" value="2338"/>
+      <details key="end" value="2358"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.108" references="/0/generateBoard/%/%.9/%.9/programmeCourse">
+      <details key="start" value="2338"/>
+      <details key="end" value="2353"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.109" references="/0/generateBoard/%/%.9/%.10">
+      <details key="start" value="2361"/>
+      <details key="end" value="2377"/>
+      <details key="line" value="114"/>
+    </eAnnotations>
+    <eAnnotations source="positions.110" references="/0/generateBoard/%/%.9/programmeCourse">
+      <details key="start" value="2015"/>
+      <details key="end" value="2047"/>
+      <details key="line" value="109"/>
+    </eAnnotations>
+    <eAnnotations source="positions.111" references="/0/generateBoard/%/%.9/%.11">
+      <details key="start" value="2050"/>
+      <details key="end" value="2073"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.112" references="/0/generateBoard/%/%.9/%.11/semester">
+      <details key="start" value="2050"/>
+      <details key="end" value="2058"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.113" references="/0/generateBoard/%/%.10">
+      <details key="start" value="2387"/>
+      <details key="end" value="2406"/>
+      <details key="line" value="117"/>
+    </eAnnotations>
+    <eAnnotations source="positions.114" references="/0/generateBoard/%/semester">
+      <details key="start" value="1271"/>
+      <details key="end" value="1290"/>
       <details key="line" value="81"/>
     </eAnnotations>
-    <eAnnotations source="positions.88" references="/0/generateBoard/%/%.5/%.3">
-      <details key="start" value="1734"/>
-      <details key="end" value="1761"/>
+    <eAnnotations source="positions.115" references="/0/generateBoard/%/%.11">
+      <details key="start" value="1293"/>
+      <details key="end" value="1312"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.89" references="/0/generateBoard/%/%.5/%.3/%">
-      <details key="start" value="1734"/>
-      <details key="end" value="1756"/>
+    <eAnnotations source="positions.116" references="/0/generateBoard/%/%.11/programme">
+      <details key="start" value="1293"/>
+      <details key="end" value="1302"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.90" references="/0/generateBoard/%/%.5/%.3/%/programmeCourse">
-      <details key="start" value="1734"/>
-      <details key="end" value="1749"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.91" references="/0/generateBoard/%/%.5/%.4">
-      <details key="start" value="1764"/>
-      <details key="end" value="1779"/>
-      <details key="line" value="82"/>
-    </eAnnotations>
-    <eAnnotations source="positions.92" references="/0/generateBoard/%/%.5/%.5">
-      <details key="start" value="1780"/>
-      <details key="end" value="1809"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.93" references="/0/generateBoard/%/%.5/%.5/%">
-      <details key="start" value="1780"/>
-      <details key="end" value="1802"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.94" references="/0/generateBoard/%/%.5/%.5/%/programmeCourse">
-      <details key="start" value="1780"/>
-      <details key="end" value="1795"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.95" references="/0/generateBoard/%/%.5/%.6">
-      <details key="start" value="1812"/>
-      <details key="end" value="1826"/>
-      <details key="line" value="83"/>
-    </eAnnotations>
-    <eAnnotations source="positions.96" references="/0/generateBoard/%/%.5/%.7">
-      <details key="start" value="1827"/>
-      <details key="end" value="1847"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.97" references="/0/generateBoard/%/%.5/%.7/programmeCourse">
-      <details key="start" value="1827"/>
-      <details key="end" value="1842"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.98" references="/0/generateBoard/%/%.5/%.8">
-      <details key="start" value="1850"/>
-      <details key="end" value="1866"/>
-      <details key="line" value="84"/>
-    </eAnnotations>
-    <eAnnotations source="positions.99" references="/0/generateBoard/%/%.5/programmeCourse">
-      <details key="start" value="1610"/>
-      <details key="end" value="1642"/>
-      <details key="line" value="79"/>
-    </eAnnotations>
-    <eAnnotations source="positions.100" references="/0/generateBoard/%/%.5/%.9">
-      <details key="start" value="1645"/>
-      <details key="end" value="1668"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.101" references="/0/generateBoard/%/%.5/%.9/semester">
-      <details key="start" value="1645"/>
-      <details key="end" value="1653"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.102" references="/0/generateBoard/%/%.6">
-      <details key="start" value="1876"/>
-      <details key="end" value="1895"/>
-      <details key="line" value="87"/>
-    </eAnnotations>
-    <eAnnotations source="positions.103" references="/0/generateBoard/%/semester">
-      <details key="start" value="931"/>
-      <details key="end" value="950"/>
-      <details key="line" value="52"/>
-    </eAnnotations>
-    <eAnnotations source="positions.104" references="/0/generateBoard/%/%.7">
-      <details key="start" value="953"/>
-      <details key="end" value="972"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.105" references="/0/generateBoard/%/%.7/programme">
-      <details key="start" value="953"/>
-      <details key="end" value="962"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.106" references="/0/generateBoard/programme">
-      <details key="start" value="902"/>
-      <details key="end" value="922"/>
-      <details key="line" value="51"/>
+    <eAnnotations source="positions.117" references="/0/generateBoard/programme">
+      <details key="start" value="1242"/>
+      <details key="end" value="1262"/>
+      <details key="line" value="80"/>
     </eAnnotations>
   </ecore:EAnnotation>
 </xmi:XMI>

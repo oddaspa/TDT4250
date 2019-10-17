@@ -15,28 +15,57 @@
 <html>
 <head>
 <meta charset="utf-8"/>
-<title>[department.code/] Courses</title>
+<title>[department.name/] Courses</title>
 <style>
-div { padding: 16px; }
 
-th {
-  height: 50px;
-  text-allign: left;
+body {
+  font-family:"open sans", arial, sans-serif;
+  color: #333;
 }
 
-table, th {
-  border: 1px solid black;
+h1 {
+  font-size: 25px;
 }
 
-tr:nth-child(even) {background: #333}
+div { 
+  padding: 14px; 
+}
 
+tr {
+  text-align: left;
+}
 
+table {
+  width: 620px;
+  border: 1px solid #F7F7F7;
+  background-color: #F7f7f7;
+}
+
+tr:nth-child(even) {background: #FAFAFA}
+
+h3 {
+  font-size: 20px;
+  color: #888;
+  margin: 0px;
+}
+
+h4 {
+  font-size: 17px;
+  color: #333;
+  margin: 0px;
+}
+
+.table-header {
+  border: 1px solid #F7F7F7;
+  background-color:#F7F7F7;
+
+}
 </style>
 </head>
 
 <body>
-
-<h1> [department.programmes.name/] </h1>
+<h1>Studieplan</h1>
+<h2> [department.programmes.name/] </h2>
 
 [for (programme : Programme | department.programmes)]
 	[generateBoard(programme)/]
@@ -67,10 +96,11 @@ tr:nth-child(even) {background: #333}
 				[/for]
 			[/if]
 		[/if]
-		
-		<h2>[semester.Season/]</h2>
-		<table class="studyInstance">
-			<tr>
+		<br>
+		<h3>[semester.Season/]</h3>
+		<h4>[semester.year/]. year [programme.name/] - 5-years</h4>
+		<table>
+			<tr class="table-header">
     			<th>Emnekode</th>
     			<th>Emnenavn</th>
     			<th>SP</th>
@@ -78,7 +108,7 @@ tr:nth-child(even) {background: #333}
   			</tr>
 			[for (programmeCourse: ProgrammeCourse | semester.programCourses)]
 			<tr>
-				<td>[programmeCourse.course.code /] </td>
+				<td class="emnekode"><a href="http://www.ntnu.no/studier/emner/[programmeCourse.course.code.toString()/]">[programmeCourse.course.code /]</a> </td>
 				<td>[programmeCourse.course.name /] </td>
 				<td>[programmeCourse.course.credit /]</td>
 				<td>[programmeCourse.type /]</td> 

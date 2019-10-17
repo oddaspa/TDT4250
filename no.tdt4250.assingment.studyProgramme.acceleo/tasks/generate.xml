@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generate" name="no.tdt4250.assingment.studyProgramme.acceleo">
-    <property name="ECLIPSE_HOME" value="../../../../../../eclipse/dsl-2019-06/eclipse"/>
+    <property name="ECLIPSE_HOME" value="../../../../../../eclipse/dsl-2019-09/eclipse"/>
     <property name="ECLIPSE_WORKSPACE" value="../../../model-transformation"/>
 
     <!-- The classpath with only the dependencies used by the project -->
