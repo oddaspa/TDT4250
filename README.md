@@ -106,10 +106,10 @@ Link to assignment to is [here]().
 ## Assignment 3
 I did some changes to ecore in correspondance of the feedback.
 The new ecore looks like this :
-![alt text](https://github.com/oddaspa/TDT4250/blob/master/img/final_ecore.png "Ecore after feedback")
+![alt text](https://github.com/oddaspa/TDT4250/blob/master/img/final_ecore.jpg "Ecore after feedback")
 
 To run the code, simply hit "run configurations" on the generate.mtl. There will be a window popping up and insert the following data:
-![alt text](https://github.com/oddaspa/TDT4250/blob/master/img/run_accelo.png "run configurations")
+![alt text](https://github.com/oddaspa/TDT4250/blob/master/img/run_accelo.jpg "run configurations")
 
 
 
