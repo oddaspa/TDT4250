@@ -100,7 +100,7 @@ No constraints yet. As you see in the UML there are some containment relationshi
 
 <a name="ass_2"></a>
 ## Assignment 2
-Link to assignment to is [here]().
+Link to assignment to is [here](https://github.com/oddaspa/OSGIUnitConverter).
 
 <a name="ass_3"></a>
 ## Assignment 3
